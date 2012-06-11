@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="idd5vtoe5xx4yvxe5xx8zx1">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:view:::id8hz6ne1xmuz9ze1xnph8s">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:UML.UseCaseModel"/>
+            <property name="bounds" value="200,180,173,142"/>
+        </reference>
+        <reference df-class-name="reference123" referencedUin="design:view:::id7c70se1xmuz9ze1xnqp4t">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:UML.DesignModel"/>
+            <property name="bounds" value="450,20,169,142"/>
+            <reference referencedUin="design:link:::id7c70se1xmuz9ze1xnqp4t.linkidmhm4e1xmuz9ze1xnrz9t">
+                <property name="sourceAnchor" value="450,134"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="373,208"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference124" referencedUin="design:view:::id44981e1xmuz9ze1xnr3vq">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:UML.DeploymentModel"/>
+            <property name="bounds" value="490,380,122,93"/>
+            <reference referencedUin="design:link:::id44981e1xmuz9ze1xnr3vq.linkid5hn86e1xmuz9ze1xns2f0">
+                <property name="sourceAnchor" value="521,380"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="339,322"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference125" referencedUin="design:view:::id7spz2e1xmuz9ze1xnpq20">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:UML.LogicalModel"/>
+            <property name="bounds" value="20,10,160,100"/>
+            <reference referencedUin="design:link:::id7spz2e1xmuz9ze1xnpq20.linkid7a8sie1xmuz9ze1xnrwf2">
+                <property name="sourceAnchor" value="100,110"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="286,180"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference126" referencedUin="design:view:::id9bgdfe1xmuz9ze1xnqwam">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:UML.TestModel"/>
+            <property name="bounds" value="20,370,83,93"/>
+            <reference referencedUin="design:link:::id9bgdfe1xmuz9ze1xnqwam.linkid1y020e1xmuz9ze1xnrsrd">
+                <property name="sourceAnchor" value="61,370"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="274,322"/>
+            </reference>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

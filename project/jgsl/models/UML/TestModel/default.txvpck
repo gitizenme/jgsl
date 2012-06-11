@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <link uin="id9bgdfe1xmuz9ze1xnqwam.linkid1y020e1xmuz9ze1xnrsrd">
+        <property name="$metaclass" value="Dependency Link"/>
+        <participant role="Supplier" referencedUin="design:view:::id8hz6ne1xmuz9ze1xnph8s"/>
+        <participant role="Client" referencedUin="design:view:::id9bgdfe1xmuz9ze1xnqwam"/>
+    </link>
+    <view uin="id9bgdfe1xmuz9ze1xnqwam">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

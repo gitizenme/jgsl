@@ -1,0 +1,1231 @@
+/*
+JGSL Grammar for JavaCC
+*/
+
+
+options {
+  JAVA_UNICODE_ESCAPE = true;
+  STATIC = false;
+  IGNORE_CASE = true;
+}
+
+
+
+PARSER_BEGIN(JGSL_Parser)
+
+package jgsl.parser;
+
+
+import jgsl.io.ScriptMessage;
+import jgsl.io.ScriptWarning;
+import jgsl.io.ScriptError;
+import jgsl.io.ScriptParserException;
+import jgsl.io.ScriptParserUtil;
+
+import jgsl.model.JGSLDouble;
+import jgsl.model.JGSLInteger;
+import jgsl.model.JGSLString;
+import jgsl.model.JGSLColor;
+import jgsl.model.JGSLScript;
+import jgsl.model.Assignment;
+import jgsl.model.Command;
+import jgsl.model.Declaration;
+import jgsl.model.Documentation;
+import jgsl.model.Logical;
+import jgsl.model.Statement;
+
+import java.awt.Color;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author zenarchitect
+ * @version $Id: JGSL_Parser.jj,v 1.6 2005/05/24 17:32:16 zenarchitect Exp $
+ */
+
+public class JGSL_Parser {
+
+  private JGSLScript script = new JGSLScript();
+
+  public JGSLScript getScript() {
+      return script;
+  }
+
+  public static void main(String args[]) throws ParseException {
+        JGSL_Parser parser;
+        String filename = null;
+        long initTime = 0;
+        long parseTime = 0;
+        long startTime = 0;
+        long stopTime = 0;
+        if (args.length == 0)
+        {
+            System.out.println("jgsl parser:  Reading from standard input . . .");
+            parser = new JGSL_Parser(System.in);
+        } else if (args.length == 1)
+        {
+            filename = args[0];
+            System.out.println("jgsl parser:  Reading from file " + filename + " . . .");
+            try
+            {
+                startTime = System.currentTimeMillis();
+                parser = new JGSL_Parser(new java.io.FileInputStream(filename));
+                stopTime = System.currentTimeMillis();
+                initTime = stopTime - startTime;
+            } catch (java.io.FileNotFoundException e)
+            {
+                System.out.println("jgsl parser:  File " + filename + " not found.");
+                return;
+            }
+        } else
+        {
+            System.out.println("jgsl parser:  Usage is one of:");
+            System.out.println("         java jsgl.JSGL < <stdin>");
+            System.out.println("OR");
+            System.out.println("         java jsgl.JSGL inputfile");
+            return;
+        }
+        try
+        {
+            startTime = System.currentTimeMillis();
+            parser.parseScript();
+            stopTime = System.currentTimeMillis();
+            parseTime = stopTime - startTime;
+            System.out.println("jgsl parser: ");
+            System.out.println("   JGSL file parsed " + filename + " successfully in " + (initTime + parseTime) + " ms.");
+            System.out.println("      initialization time = " + initTime + " ms.");
+            System.out.println("      parse time = " + parseTime + " ms.");
+        } catch (ParseException e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("jgsl parser:  Encountered errors during parse.");
+        }
+  }
+
+}
+
+PARSER_END(JGSL_Parser)
+
+ /* WHITE SPACE */
+
+ SPECIAL_TOKEN :
+ {
+   " "
+ | "\t"
+ | "\n"
+ | "\r"
+ | "\f"
+ }
+
+ /* COMMENTS */
+
+ MORE :
+ {
+   "//" : IN_SINGLE_LINE_COMMENT
+ |
+   "#" : IN_SINGLE_LINE_COMMENT
+ |
+   <"/**" ~["/"]> { input_stream.backup(1); } : IN_FORMAL_COMMENT
+ |
+   "/*" : IN_MULTI_LINE_COMMENT
+ }
+
+
+ <IN_SINGLE_LINE_COMMENT>
+ SPECIAL_TOKEN :
+ {
+   <SINGLE_LINE_COMMENT: "\n" | "\r" | "\r\n" > : DEFAULT
+ }
+
+ <IN_FORMAL_COMMENT>
+ SPECIAL_TOKEN :
+ {
+   <FORMAL_COMMENT: "*/" > : DEFAULT
+ }
+
+ <IN_MULTI_LINE_COMMENT>
+ SPECIAL_TOKEN :
+ {
+   <MULTI_LINE_COMMENT: "*/" > : DEFAULT
+ }
+
+ <IN_SINGLE_LINE_COMMENT,IN_FORMAL_COMMENT,IN_MULTI_LINE_COMMENT>
+ MORE :
+ {
+   < ~[] >
+ }
+
+ /* RESERVED WORDS AND LITERALS */
+
+
+// logic  TODO
+ TOKEN :
+ {
+   < AND: "and" >
+ | < OR: "or" >
+ | < NOT: "not" >
+ | < IF: "if" >
+ | < THEN: "then" >
+ | < ELSE: "else" >
+ | < ELSEIF: "elseif" >
+ | < TRUE: "true" >
+ | < FALSE: "false" >
+ }
+
+// commands TODO
+ TOKEN :
+ {
+   < CLEAR: "clear" >
+ | < CANVAS: "canvas" >
+ | < DRAW: "draw" >
+ | < TEXT: "text" >
+ | < RECTANGLE: "rectangle" >
+ | < SQUARE: "square" >
+ | < CIRCLE: "circle" >
+ | < ELIPSE: "elipse" >
+ | < ARC: "arc" >
+ | < POLYGON: "polygon" >
+ | < LINE: "line" >
+ | < WAIT: "wait" >
+ | < LOG: "log">
+ | < DEBUG: "debug" >
+ | < ERROR: "error" >
+ | < WARNING: "warning" >
+ | < WRITE: "write" >
+ | < READ: "read" >
+ | < JGSL: "jgsl" >
+ | < VERSION: "version" >
+ }
+
+// flow control TODO
+ TOKEN :
+ {
+   < BEGIN: "begin" >
+ | < END: "end" >
+ | < REPEAT: "repeat" >
+ | < LOOP: "loop" >
+ }
+
+// colors
+ TOKEN :
+ {
+   < BLACK: "black" >
+ | < BLUE: "blue" >
+ | < DARK_GRAY: "dark_gray" >
+ | < GRAY: "gray" >
+ | < GREEN: "green" >
+ | < LIGHT_GRAY: "light_gray" >
+ | < MAGENTA: "magenta" >
+ | < ORANGE: "orange" >
+ | < PINK: "pink" >
+ | < RED: "red" >
+ | < WHITE: "white" >
+ | < YELLOW: "yellow" >
+ }
+
+// painting objects
+TOKEN :
+{
+   < GRADIENT: "gradient" >
+ | < FILL: "fill" >
+ | < BORDER: "border" >
+ | < FOREGROUND: "foreground" >
+ | < BACKGROUND: "background" >
+ | < COLOR: "color" >
+}
+
+// language
+ TOKEN :
+ {
+   < DECLARE: "declare" >
+ | < DOC: "doc" >   // TODO
+ }
+
+
+
+
+ /* LITERALS */
+
+ TOKEN :
+ {
+   < INTEGER_LITERAL:
+         <DECIMAL_LITERAL>
+       | <HEX_LITERAL>
+       | <OCTAL_LITERAL>
+   >
+ |
+   < #DECIMAL_LITERAL: ["1"-"9"] (["0"-"9"])* >
+ |
+   < #HEX_LITERAL: "0" ["x","X"] (["0"-"9","a"-"f","A"-"F"])+ >
+ |
+   < #OCTAL_LITERAL: "0" (["0"-"7"])* >
+ |
+   < FLOATING_POINT_LITERAL:
+         (["0"-"9"])+ "." (["0"-"9"])*
+   >
+ |
+   < STRING_LITERAL:
+       "\""
+       (   (~["\"","\\","\n","\r"])
+         | ("\\"
+             ( ["n","t","b","r","f","\\","'","\""]
+             | ["0"-"7"] ( ["0"-"7"] )?
+             | ["0"-"3"] ["0"-"7"] ["0"-"7"]
+             )
+           )
+       )*
+       "\""
+   >
+ }
+
+/* IDENTIFIERS */
+
+TOKEN :
+{
+  < IDENTIFIER: <LETTER> (<LETTER>|<DIGIT>)* >
+|
+  < #LETTER:
+      [
+       "\u0024",
+       "\u0041"-"\u005a",
+       "\u005f",
+       "\u0061"-"\u007a",
+       "\u00c0"-"\u00d6",
+       "\u00d8"-"\u00f6",
+       "\u00f8"-"\u00ff",
+       "\u0100"-"\u1fff",
+       "\u3040"-"\u318f",
+       "\u3300"-"\u337f",
+       "\u3400"-"\u3d2d",
+       "\u4e00"-"\u9fff",
+       "\uf900"-"\ufaff"
+      ]
+  >
+|
+  < #DIGIT:
+      [
+       "\u0030"-"\u0039",
+       "\u0660"-"\u0669",
+       "\u06f0"-"\u06f9",
+       "\u0966"-"\u096f",
+       "\u09e6"-"\u09ef",
+       "\u0a66"-"\u0a6f",
+       "\u0ae6"-"\u0aef",
+       "\u0b66"-"\u0b6f",
+       "\u0be7"-"\u0bef",
+       "\u0c66"-"\u0c6f",
+       "\u0ce6"-"\u0cef",
+       "\u0d66"-"\u0d6f",
+       "\u0e50"-"\u0e59",
+       "\u0ed0"-"\u0ed9",
+       "\u1040"-"\u1049"
+      ]
+  >
+}
+
+
+/* SEPARATORS */
+
+TOKEN :
+{
+  < LPAREN: "(" >
+| < RPAREN: ")" >
+| < SEMICOLON: ";" >
+| < COLON: ":" >
+| < COMMA: "," >
+}
+
+/* OPERATORS */
+
+TOKEN :
+{
+  < ASSIGN: "=" >
+| < GT: ">" >
+| < LT: "<" >
+| < BANG: "!" >
+| < EQ: "==" >
+| < LE: "<=" >
+| < GE: ">=" >
+| < NE: "!=" >
+| < SC_OR: "||" >
+| < SC_AND: "&&" >
+| < PLUS: "+" >
+| < MINUS: "-" >
+| < STAR: "*" >
+| < SLASH: "/" >
+| < MOD: "%" >
+}
+
+
+/*
+<comments | documentation>*
+
+<BEGIN>
+
+<attributes | commands | comments | documentation>
+
+<END>
+
+*/
+
+/*****************************************
+ * THE JGSL GRAMMAR STARTS HERE          *
+ *****************************************/
+
+/*
+ * Program structuring syntax follows.
+ */
+
+void parseScript() :
+{}
+{
+    Script()
+}
+
+void Script() :
+{}
+{
+  (Documentation())*
+  [ ScriptBody() ]
+  <EOF>
+}
+
+void Documentation() :
+{
+    Token doc;
+}
+{
+  <DOC>
+  doc = <STRING_LITERAL>
+  {
+    script.addDocumentation(doc.image);
+  }
+}
+
+void ScriptBody() :
+{}
+{
+  <BEGIN>
+  ( Command() | Declaration() | Assignment() | Documentation() )*
+  <END>
+}
+
+void Command() :
+{}
+{
+    try {
+        (
+            Canvas()
+            | Clear()
+            | Wait()
+            | Draw()
+            | DrawShape()
+            | DrawText()
+            | Log()
+         ) <SEMICOLON>
+     }
+     catch(ParseException e) {
+         error_skipto(SEMICOLON);
+     }
+}
+
+
+JAVACODE
+void error_skipto(int kind) {
+    ParseException e = generateParseException();  // generate the exception object.
+
+    ScriptError se = new ScriptError(e.getMessage());
+    script.addError(se);
+
+    Token t;
+    do {
+    t = getNextToken();
+    } while (t.kind != kind);
+    // The above loop consumes tokens all the way up to a token of
+    // "kind".  We use a do-while loop rather than a while because the
+    // current token is the one immediately before the erroneous token
+    // (in our case the token immediately before what should have been
+    // "if"/"while".
+}
+
+void Clear() :
+{
+    Token name;
+}
+{
+    name = <CLEAR>
+    {
+        Command c = new Command(name.image);
+        script.add(c);
+    }
+}
+
+
+Color GetStandardColor() :
+{
+    Token value;
+}
+{
+    try {
+    ( value = <BLACK>
+        | value = <BLUE>
+        | value = <DARK_GRAY>
+        | value = <GRAY>
+        | value = <GREEN>
+        | value = <LIGHT_GRAY>
+        | value = <MAGENTA>
+        | value = <ORANGE>
+        | value = <PINK>
+        | value = <RED>
+        | value = <WHITE>
+        | value = <YELLOW>
+    )
+    } catch (ParseException e) {
+        ScriptError se = new ScriptError(e.getMessage());
+        script.addError(se);
+        return null;
+    }
+    {
+//        Color color = Color.RED;
+        String colorName = value.image.toLowerCase();
+        if(colorName.equals("black")) {
+            return Color.BLACK;
+        }
+        else if(colorName.equals("blue")) {
+            return Color.BLUE;
+        }
+        else if(colorName.equals("dark_gray")) {
+            return Color.DARK_GRAY;
+        }
+        else if(colorName.equals("gray")) {
+            return Color.GRAY;
+        }
+        else if(colorName.equals("green")) {
+            return Color.GREEN;
+        }
+        else if(colorName.equals("light_gray")) {
+            return Color.LIGHT_GRAY;
+        }
+        else if(colorName.equals("magenta")) {
+            return Color.MAGENTA;
+        }
+        else if(colorName.equals("orange")) {
+            return Color.ORANGE;
+        }
+        else if(colorName.equals("pink")) {
+            return Color.PINK;
+        }
+        else if(colorName.equals("red")) {
+            return Color.RED;
+        }
+        else if(colorName.equals("white")) {
+            return Color.WHITE;
+        }
+        else if(colorName.equals("yellow")) {
+            return Color.YELLOW;
+        }
+    }
+}
+
+Color GetRGB() :
+{
+    Token r;
+    Token g;
+    Token b;
+}
+{
+    ( r = <INTEGER_LITERAL> <COMMA> g = <INTEGER_LITERAL> <COMMA> b = <INTEGER_LITERAL>
+        | r = <STRING_LITERAL> <COMMA> g = <STRING_LITERAL> <COMMA> b = <STRING_LITERAL>
+    )
+    {
+//        Color rgb = new Color(0,0,0);
+        int rInt = -1;
+        int gInt = -1;
+        int bInt = -1;
+
+        try {
+            rInt = ScriptParserUtil.parseInt(r.image);
+        }
+        catch(ScriptParserException e) {
+            ScriptError se = new ScriptError(e.getMessage(), r.beginLine, r.beginColumn);
+            script.addError(se);
+        }
+        try {
+            rInt = ScriptParserUtil.parseInt(g.image);
+        }
+        catch(ScriptParserException e) {
+            ScriptError se = new ScriptError(e.getMessage(), g.beginLine, g.beginColumn);
+            script.addError(se);
+        }
+        try {
+            rInt = ScriptParserUtil.parseInt(b.image);
+        }
+        catch(ScriptParserException e) {
+            ScriptError se = new ScriptError(e.getMessage(), b.beginLine, b.beginColumn);
+            script.addError(se);
+        }
+
+        Color c = null;
+
+        if(rInt != -1 && gInt != -1 && bInt != -1) {
+            c = new Color(rInt, gInt, bInt);
+        }
+
+        return c;
+
+    }
+}
+
+
+
+Color GetColor() :
+{
+    Color c;
+}
+{
+    ( c = GetStandardColor() | c = GetRGB())
+    {
+        return c;
+    }
+}
+
+void Canvas() :
+{
+    Token name = null;
+    Token width = null;
+    Token height = null;
+    Color bgcolor = null;
+    Color fgcolor = null;
+    Token title = null;
+    ArrayList attributes = new ArrayList();
+}
+{
+        name = <CANVAS> (<COLON> attributes = CanvasAttributes())?
+            <LPAREN> (width = <INTEGER_LITERAL> | width = <STRING_LITERAL>) <COMMA>
+            (height = <INTEGER_LITERAL> | height = <STRING_LITERAL>) <COMMA>
+            bgcolor = GetColor() <COMMA>
+            fgcolor = GetColor()
+            ( <COMMA> title = <STRING_LITERAL>)? <RPAREN>
+     {
+            ArrayList parameters = new ArrayList(4);
+
+            if(bgcolor != null) {
+                parameters.add(new JGSLColor("background", bgcolor));
+            }
+            else {
+                parameters.add(new JGSLColor("background", Color.WHITE));
+                ScriptWarning se = new ScriptWarning("Setting canvas background to WHITE.");
+                script.addWarning(se);
+            }
+
+            if(fgcolor != null) {
+                parameters.add(new JGSLColor("foreground", fgcolor));
+            }
+            else {
+                parameters.add(new JGSLColor("foreground", Color.BLACK));
+                ScriptWarning se = new ScriptWarning("Setting canvas foreground to BLACK.");
+                script.addWarning(se);
+            }
+
+            addIntParam(parameters, "width", width);
+            addIntParam(parameters, "height", height);
+
+            if(title != null) {
+                parameters.add(new JGSLString("title", title.image));
+            }
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+
+ArrayList CanvasAttributes() :
+{
+    Token attrib;
+}
+{
+    attrib = <RED>
+    {
+        ArrayList attributes = new ArrayList(1);
+        return attributes;
+    }
+}
+
+
+void Wait() :
+{
+    Token name;
+    Token durationSeconds;
+}
+{
+    name = <WAIT> <LPAREN> (durationSeconds = <INTEGER_LITERAL> | durationSeconds = <STRING_LITERAL>) <RPAREN>
+    {
+        ArrayList parameters = new ArrayList(1);
+        addIntParam(parameters, "duration", durationSeconds);
+        Command c = new Command(name.image, parameters);
+        script.add(c);
+    }
+}
+
+ArrayList DrawAttributes() :
+{
+    Token attrib;
+}
+{
+    attrib = <RED>
+    {
+        ArrayList attributes = new ArrayList(1);
+        return attributes;
+    }
+}
+
+void Draw() :
+{
+    Token name;
+    Token x;
+    Token y;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <DRAW> (<COLON> attributes = DrawAttributes())?
+        <LPAREN> (x = <INTEGER_LITERAL> | x = <STRING_LITERAL>) <COMMA>
+            (y = <INTEGER_LITERAL> | y = <STRING_LITERAL>)
+            <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(2);
+            addIntParam(parameters, "x", x);
+            addIntParam(parameters, "y", y);
+            addIntParam(parameters, "x", x);
+            addIntParam(parameters, "y", y);
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+//<COLON> (Attributes())? (<LPAREN> Parameters() <RPAREN>)?
+
+void Log() :
+{}
+{
+    ( Message() | Warning() | Debug() | Error() )
+}
+
+void Message() :
+{
+    Token name;
+    Token message;
+}
+{
+    name = <LOG> <LPAREN> (message = <STRING_LITERAL>) <RPAREN>
+    {
+        ArrayList parameters = new ArrayList(1);
+        parameters.add(new JGSLString("message", message.image));
+        Command c = new Command(name.image, parameters);
+        script.add(c);
+    }
+}
+
+void Warning() :
+{
+    Token name;
+    Token message;
+}
+{
+    name = <WARNING> <LPAREN> (message = <STRING_LITERAL>) <RPAREN>
+    {
+        ArrayList parameters = new ArrayList(1);
+        parameters.add(new JGSLString("message", message.image));
+        Command c = new Command(name.image, parameters);
+        script.add(c);
+    }
+}
+
+void Error() :
+{
+    Token name;
+    Token message;
+}
+{
+    name = <ERROR> <LPAREN> (message = <STRING_LITERAL>) <RPAREN>
+    {
+        ArrayList parameters = new ArrayList(1);
+        parameters.add(new JGSLString("message", message.image));
+        Command c = new Command(name.image, parameters);
+        script.add(c);
+    }
+}
+
+void Debug() :
+{
+    Token name;
+    Token message;
+}
+{
+    name = <DEBUG> <LPAREN> (message = <STRING_LITERAL>) <RPAREN>
+    {
+        ArrayList parameters = new ArrayList(1);
+        parameters.add(new JGSLString("message", message.image));
+        Command c = new Command(name.image, parameters);
+        script.add(c);
+    }
+}
+
+void DrawShape() :
+{}
+{
+    (
+        DrawLine()
+        | DrawRectangle()
+        | DrawSquare()
+        | DrawCircle()
+        | DrawElipse()
+        | DrawArc()
+        | DrawPolygon()
+        )
+}
+
+void DrawLine() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token x2;
+    Token y2;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <LINE> (<COLON> attributes = LineAttributes())?
+        <LPAREN> (x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) <COMMA>
+            (x2 = <INTEGER_LITERAL> | x2 = <STRING_LITERAL>) <COMMA>
+            (y2 = <INTEGER_LITERAL> | y2 = <STRING_LITERAL>) <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(4);
+            addIntParam(parameters, "x1", x1);
+            addIntParam(parameters, "y1", y1);
+            addIntParam(parameters, "x2", x2);
+            addIntParam(parameters, "y2", y2);
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+ArrayList LineAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+
+
+void DrawRectangle() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token width;
+    Token height;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <RECTANGLE> (<COLON> attributes = RectangleAttributes())?
+        <LPAREN> (x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) <COMMA>
+            (width = <INTEGER_LITERAL> | width = <STRING_LITERAL>) <COMMA>
+            (height = <INTEGER_LITERAL> | height = <STRING_LITERAL>) <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(4);
+            addIntParam(parameters, "x1", x1);
+            addIntParam(parameters, "y1", y1);
+            addIntParam(parameters, "width", width);
+            addIntParam(parameters, "height", height);
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+ArrayList RectangleAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+
+void DrawSquare() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token width;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <SQUARE> (<COLON> attributes = SquareAttributes())?
+        <LPAREN> (x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) <COMMA>
+            (width = <INTEGER_LITERAL> | width = <STRING_LITERAL>)  <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(4);
+            addIntParam(parameters, "x1", x1);
+            addIntParam(parameters, "y1", y1);
+            addIntParam(parameters, "width", width);
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+ArrayList SquareAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+void DrawCircle() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token radius;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <CIRCLE> (<COLON> attributes = CircleAttributes())?
+        <LPAREN> (x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) <COMMA>
+            (radius = <FLOATING_POINT_LITERAL> | radius = <STRING_LITERAL>)  <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(4);
+            addIntParam(parameters, "x1", x1);
+            addIntParam(parameters, "y1", y1);
+            addDecimalParam(parameters, "radius", radius);
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+ArrayList CircleAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+void DrawElipse() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token width;
+    Token height;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <ELIPSE> (<COLON> attributes = ElipseAttributes())?
+        <LPAREN> (x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) <COMMA>
+            (width = <INTEGER_LITERAL> | width = <STRING_LITERAL>) <COMMA>
+            (height = <INTEGER_LITERAL> | height = <STRING_LITERAL>) <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(4);
+            addIntParam(parameters, "x1", x1);
+            addIntParam(parameters, "y1", y1);
+            addIntParam(parameters, "width", width);
+            addIntParam(parameters, "height", height);
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+ArrayList ElipseAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+void DrawArc() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token width;
+    Token height;
+    Token startAngle;
+    Token arcAngle;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <ARC> (<COLON> attributes = ArcAttributes())?
+        <LPAREN> (x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) <COMMA>
+            (width = <INTEGER_LITERAL> | width = <STRING_LITERAL>) <COMMA>
+            (height = <INTEGER_LITERAL> | height = <STRING_LITERAL>) <COMMA>
+            (startAngle = <INTEGER_LITERAL> | startAngle = <STRING_LITERAL>) <COMMA>
+            (arcAngle = <INTEGER_LITERAL> | arcAngle = <STRING_LITERAL>)
+            <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(4);
+            addIntParam(parameters, "x1", x1);
+            addIntParam(parameters, "y1", y1);
+            addIntParam(parameters, "width", width);
+            addIntParam(parameters, "height", height);
+            addIntParam(parameters, "startAngle", startAngle);
+            addIntParam(parameters, "arcAngle", arcAngle);
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+ArrayList ArcAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+void DrawPolygon() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token width;
+    Token height;
+    Token startAngle;
+    Token arcAngle;
+    ArrayList attributes = new ArrayList();
+    ArrayList parameters = new ArrayList();
+}
+{
+    ( name = <POLYGON> (<COLON> attributes = PolygonAttributes())?
+        <LPAREN> (PolygonParameters(parameters))
+            <RPAREN>)
+     {
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+ArrayList PolygonAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+void PolygonParameters(ArrayList parameters) :
+{
+    Token x1 = null;
+    Token y1 = null;
+}
+{
+    ((x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) (<COMMA>)? )*
+    {
+        addIntParam(parameters, "x", x1);
+        addIntParam(parameters, "y", y1);
+    }
+}
+
+void DrawText() :
+{
+    Token name;
+    Token x1;
+    Token y1;
+    Token text;
+    ArrayList attributes = new ArrayList();
+}
+{
+    ( name = <TEXT> (<COLON> attributes = TextAttributes())?
+        <LPAREN> (x1 = <INTEGER_LITERAL> | x1 = <STRING_LITERAL>) <COMMA>
+            (y1 = <INTEGER_LITERAL> | y1 = <STRING_LITERAL>) <COMMA>
+            (text = <STRING_LITERAL>)
+            <RPAREN>)
+     {
+            ArrayList parameters = new ArrayList(3);
+            addIntParam(parameters, "x1", x1);
+            addIntParam(parameters, "y1", y1);
+            parameters.add(new JGSLString("text", text.image));
+
+            Command c = new Command(name.image, attributes, parameters);
+            script.add(c);
+     }
+}
+
+
+JAVACODE
+void addIntParam(ArrayList parameters, String paramName, Token t) {
+    try {
+        if(t == null) {
+            String msg = "Unable to convert value to a number.";
+            ScriptError se = new ScriptError(msg, t.beginLine, t.beginColumn);
+            script.addError(se);
+        }
+        parameters.add(new JGSLInteger(paramName, t.image));
+    }
+    catch(NumberFormatException e) {
+        String msg = "Unable to convert value " + t.image + " to a number.";
+        ScriptError se = new ScriptError(msg, t.beginLine, t.beginColumn);
+        script.addError(se);
+    }
+}
+
+JAVACODE
+void addDecimalParam(ArrayList parameters, String paramName, Token t) {
+    try {
+        parameters.add(new JGSLDouble(paramName, t.image));
+    }
+    catch(NumberFormatException e) {
+        String msg = "Unable to convert value " + t.image + " to a number.";
+        ScriptError se = new ScriptError(msg, t.beginLine, t.beginColumn);
+        script.addError(se);
+    }
+}
+
+ArrayList TextAttributes() :
+{
+    Color c;
+}
+{
+    c = GetColor()
+    {
+        ArrayList attributes = new ArrayList(1);
+        attributes.add(new JGSLColor("c", c));
+        return attributes;
+    }
+}
+
+
+void Declaration() :
+{}
+{
+    ( <DECLARE> (DeclareColor() |
+        (<IDENTIFIER> (<ASSIGN> (<IDENTIFIER> | <INTEGER_LITERAL> | <STRING_LITERAL> | <FLOATING_POINT_LITERAL>) )? ) ) ) <SEMICOLON>
+}
+
+void DeclareCanvas() :
+{
+    Token type;
+    Token id;
+    Token tokenValue = null;
+}
+{
+    type = <CANVAS> id = <IDENTIFIER> (<ASSIGN> tokenValue = <CANVAS>)?
+    {
+        String value = null;
+        if(tokenValue != null) {
+            value = tokenValue.image;
+        }
+        Declaration d = new Declaration(type.image, id.image, value);
+        script.add(d);
+    }
+}
+
+void DeclareColor() :
+{
+    Token type;
+    Token id;
+}
+{
+    type = <COLOR> id = <IDENTIFIER> (<ASSIGN> (DeclareStandardColor(type, id) | (DeclareRGB(type, id)) ) )?
+}
+
+void DeclareStandardColor(Token type, Token id) :
+{
+    Token value;
+}
+{
+    ( value = <BLACK>
+        | value = <BLUE>
+        | value = <DARK_GRAY>
+        | value = <GRAY>
+        | value = <GREEN>
+        | value = <LIGHT_GRAY>
+        | value = <MAGENTA>
+        | value = <ORANGE>
+        | value = <PINK>
+        | value = <RED>
+        | value = <WHITE>
+        | value = <YELLOW>
+    )
+    {
+        Declaration d = new Declaration(type.image, id.image, value.image);
+        script.add(d);
+    }
+}
+
+void DeclareRGB(Token type, Token id) :
+{
+    Token r;
+    Token g;
+    Token b;
+}
+{
+    ( r = <INTEGER_LITERAL> <COMMA> g = <INTEGER_LITERAL> <COMMA> b = <INTEGER_LITERAL>
+        | r = <STRING_LITERAL> <COMMA> g = <STRING_LITERAL> <COMMA> b = <STRING_LITERAL>
+    )
+    {
+        String rgb = r.image + "," + g.image + "," + b.image;
+        Declaration d = new Declaration(type.image, id.image, rgb);
+        script.add(d);
+    }
+}
+
+void Assignment() :
+{
+    Token lhs;
+    Token rhs;
+}
+{
+    lhs = <IDENTIFIER> <ASSIGN> (rhs = <IDENTIFIER> | rhs = <INTEGER_LITERAL> | rhs = <STRING_LITERAL>)
+    {
+        Assignment a = new Assignment(lhs.image, rhs.image);
+        script.add(a);
+    }
+     <SEMICOLON>
+}
+

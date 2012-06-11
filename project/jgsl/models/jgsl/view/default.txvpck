@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id94vv6e6cow23xe6cowo2i">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:view:::iddm9e5e6cow23xe6cowo3c">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.view.swing"/>
+        </reference>
+        <reference df-class-name="reference89" referencedUin="jdt:e_class:src:jgsl.view.ScriptViewer">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference90" referencedUin="design:view:::id8tdiye8djsvv7e8dk7sp0">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.view.swing"/>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

@@ -1,0 +1,6 @@
+
+Use MSIINFO to modify the installer DB jgsl.msi
+
+C:\Program Files\Microsoft Platform SDK\Bin>MsiInfo.Exe c:\dev\jgsl.dev.java.net\jgsl\dist\installers\windows\jgsl\jgsl.
+msi -T "Java Graphics Scripting Language" -J "JGSL" -A "Perceptionsoft" -K "Java, Graphics" -O "This installer database
+contains the logic to install the JGSL." -P ;1033 -V {9A1C843A-1C97-4A34-9001-61B556F70316} -G 100 -W 0 -N Orca -U 0

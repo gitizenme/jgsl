@@ -1,0 +1,403 @@
+<project name="jsgl" default="all" basedir=".">
+    <description>
+        JSGL Project Build File
+    </description>
+    <!-- set global properties for this build -->
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <property name="lib" location="lib"/>
+    <property name="build.classes" location="${build}/classes"/>
+    <property name="build.jars" location="${build}/jars"/>
+    <property name="test" location="test"/>
+    <property name="dist" location="dist"/>
+    <property name="dist.lib" location="${dist}/lib"/>
+    <property name="jnlp" location="www/jnlp"/>
+    <property name="windows.dist.dir" location="${dist}/installers/windows/jgsl/jgsl"/>
+    <property name="linux.dist.dir" location="${dist}/installers/linux/jgsl"/>
+    <property name="mac.dist.dir" location="${dist}/installers/mac/jgsl/JGSL.app/Contents/Resources/Java"/>
+    <property name="jnlp.web" location="/Users/jchavez/Sites/jnlp"/>
+    <property name="target.jar" value="jgsl.jar"/>
+    <property name="target_rt.jar" value="jgsl_rt.jar"/>
+    <property name="main.class" value="jgsl.JGSL"/>
+    <property name="jgsl.args" value=""/>
+    <property name="signjar.verbose" value="false"/>
+    <property name="compiler.debug" value="on"/>
+    <property name="compiler.generate.no.warnings" value="off"/>
+    <property name="compiler.args" value="-Xlint:unchecked -source 1.5"/>
+    <property name="compiler.max.memory" value="128m"/>
+
+
+    <buildnumber/>
+
+    <target name="all" depends="jgsl.javacc, dist.jnlp">
+        <echo message="Completed build of the jgsl project"/>
+
+    </target>
+
+    <target name="init">
+        <echo message="Initialize the jgsl project build"/>
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${build.classes}"/>
+        <mkdir dir="${build.jars}"/>
+        <mkdir dir="${lib}"/>
+        <mkdir dir="${dist.lib}"/>
+        <copy file="docs/jgsl_tutorial.jgsl" todir="${src}/jgsl/resources"/>
+        <copy file="docs/online_help.jgsl" todir="${src}/jgsl/resources"/>
+
+    </target>
+
+    <target name="compile" depends="init, jgsl.javacc, uidesigner.compile"
+            description="compiling the source">
+        <echo message="Compiling the source"/>
+        <!-- Compile the java code from ${src} into ${build} -->
+        <javac srcdir="${src}" destdir="${build.classes}" debug="true">
+            <include name="**/*.java"/>
+            <classpath>
+                <path location="${build.classes}"/>
+                <fileset refid="lib.jars"/>
+            </classpath>
+            <!--            <compilerarg line="-Xlint:unchecked"/>-->
+        </javac>
+        <copy todir="${build.classes}">
+            <fileset dir="${src}">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <fileset id="javacc.files" dir="${src}/jgsl/parser">
+        <include name="**/*.java"/>
+        <include name="**/*.jj"/>
+    </fileset>
+
+    <fileset id="build.files" dir="${build.classes}/jgsl">
+        <include name="**/*.class"/>
+        <include name="**/*.prop"/>
+    </fileset>
+
+    <fileset id="jgsl.jars" dir="${build.jars}">
+        <include name="${target.jar}"/>
+    </fileset>
+
+    <fileset id="lib.jars" dir="${lib}">
+        <include name="javassist.jar"/>
+        <include name="commons-cli-1.0.jar"/>
+        <include name="idea_forms_rt.jar"/>
+        <include name="junit.jar"/>
+        <include name="log4j-1.2.9.jar"/>
+    </fileset>
+
+    <fileset id="dist.jars" dir="${dist.lib}">
+        <include name="jgsl.jar"/>
+        <include name="javassist.jar"/>
+        <include name="commons-cli-1.0.jar"/>
+        <include name="idea_forms_rt.jar"/>
+        <include name="log4j-1.2.9.jar"/>
+    </fileset>
+
+    <fileset id="dist.files" dir="${lib}">
+        <include name="jgsl.jnlp"/>
+        <include name="commons_cli.jnlp"/>
+        <include name="idea_forms_rt.jnlp"/>
+        <include name="javassist.jnlp"/>
+        <include name="log4j.jnlp"/>
+        <include name="jgsl.ks"/>
+    </fileset>
+
+    <fileset id="dist.jnlp.files" dir="${dist}">
+        <include name="jgsl.jnlp"/>
+        <include name="commons_cli.jnlp"/>
+        <include name="idea_forms_rt.jnlp"/>
+        <include name="javassist.jnlp"/>
+        <include name="log4j.jnlp"/>
+    </fileset>
+
+    <target name="checkJGSLJarStatus">
+
+        <uptodate property="jgsl.jar.notRequired">
+            <srcfiles dir="${build.classes}" includes="**/*.class"/>
+            <mapper type="merge" to="${build.jars}/${target.jar}"/>
+        </uptodate>
+    </target>
+
+    <target name="jgsl.jar" depends="init, jgsl.javacc, compile.module.jgsl_ide.production, checkJGSLJarStatus" unless="jgsl.jar.notRequired">
+        <delete file="${build.classes}/lib/${target_rt.jar}"/>
+        <delete file="${build.classes}/lib/log4j-1.2.9.jar"/>
+        <jar jarfile="${build.jars}/${target_rt.jar}" basedir="${build.classes}">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+            <exclude name="**/*Test.class"/>
+        </jar>
+        <copy todir="${build.classes}">
+            <fileset dir="${src}">
+                <exclude name="**/*.java"/>
+                <exclude name="**/*.txvpck"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.classes}/lib">
+            <fileset dir="${build.jars}">
+                <include name="${target_rt.jar}"/>
+            </fileset>
+            <fileset dir="${lib}">
+                <include name="log4j-1.2.9.jar"/>
+            </fileset>
+        </copy>
+        <jar jarfile="${build.jars}/${target.jar}" basedir="${build.classes}">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+            <exclude name="**/*Test.class"/>
+        </jar>
+    </target>
+
+    <target name="dist" depends="jgsl.jar"
+            description="generate the distribution">
+        <echo message="Generating the distribution"/>
+
+        <copy todir="${dist.lib}" verbose="true">
+            <fileset refid="lib.jars"/>
+            <fileset refid="jgsl.jars"/>
+        </copy>
+        <copy todir="${dist}" verbose="true">
+            <fileset refid="dist.files"/>
+        </copy>
+        <signjar keystore="${dist}/jgsl.ks"
+                 jar="${dist.lib}/jgsl.jar"
+                 alias="jgsl@perceptionsoft.com"
+                 storepass="jwbh@25a" verbose="${signjar.verbose}"/>
+        <signjar keystore="${dist}/jgsl.ks"
+                 jar="${dist.lib}/commons-cli-1.0.jar"
+                 alias="jgsl@perceptionsoft.com"
+                 storepass="jwbh@25a" verbose="${signjar.verbose}"/>
+        <signjar keystore="${dist}/jgsl.ks"
+                 jar="${dist.lib}/idea_forms_rt.jar"
+                 alias="jgsl@perceptionsoft.com"
+                 storepass="jwbh@25a" verbose="${signjar.verbose}"/>
+        <signjar keystore="${dist}/jgsl.ks"
+                 jar="${dist.lib}/javassist.jar"
+                 alias="jgsl@perceptionsoft.com"
+                 storepass="jwbh@25a" verbose="${signjar.verbose}"/>
+        <signjar keystore="${dist}/jgsl.ks"
+                 jar="${dist.lib}/log4j-1.2.9.jar"
+                 alias="jgsl@perceptionsoft.com"
+                 storepass="jwbh@25a" verbose="${signjar.verbose}"/>
+    </target>
+
+    <target name="dist.windows" depends="dist"
+            description="generate the Windows distribution">
+        <echo message="Generating the Windows distribution"/>
+
+        <copy todir="${windows.dist.dir}" verbose="true">
+            <fileset refid="dist.jars"/>
+        </copy>
+    </target>
+
+    <target name="dist.linux" depends="dist"
+            description="generate the Linux distribution">
+        <echo message="Generating the Linux distribution"/>
+
+        <copy todir="${linux.dist.dir}" verbose="true">
+            <fileset refid="dist.jars"/>
+        </copy>
+
+    </target>
+
+    <target name="dist.mac" depends="dist"
+            description="generate the Linux distribution">
+        <echo message="Generating the Linux distribution"/>
+
+        <copy todir="${mac.dist.dir}" verbose="true">
+            <fileset refid="dist.jars"/>
+        </copy>
+
+    </target>
+
+    <target name="dist.jnlp" depends="dist"
+            description="generate the JNLP distribution">
+        <echo message="Generating the JNLP distribution"/>
+
+        <copy todir="${jnlp}" verbose="true">
+            <fileset refid="dist.jars"/>
+            <fileset refid="dist.jnlp.files"/>
+        </copy>
+
+    </target>
+
+    <target name="dist.jnlp.web" depends="dist.jnlp"
+            description="Copy the JNLP files to the web server directory">
+        <echo message="Copy the JNLP files to the web server directory"/>
+
+        <copy todir="${jnlp.web}" verbose="true">
+            <fileset dir="www/jnlp"/>
+        </copy>
+
+    </target>
+
+
+    <target name="clean"
+            description="clean project build product from ${build.classes} and ${dist.lib}">
+        <echo message="clean project build product from ${build.classes} and ${dist.lib}"/>
+
+        <delete verbose="true">
+            <fileset refid="build.files"/>
+            <fileset refid="javacc.files"/>
+            <fileset refid="jgsl.jars"/>
+            <fileset refid="dist.jars"/>
+        </delete>
+    </target>
+
+    <target name="run" depends="dist.jnlp"
+            description="Run JGSL">
+        <java classname="jgsl.JGSL"
+              fork="true"
+              failonerror="true"
+              maxmemory="128m"
+                >
+            <classpath>
+                <fileset refid="dist.jars"/>
+            </classpath>
+            <arg line="${jgsl.args}"/>
+        </java>
+    </target>
+
+    <!-- java -cp ./build/classes jgsl.parser.JGSL_Parser ./parser/simple.jgsl    -->
+    <target name="run-parser" depends="dist.jnlp"
+            description="Run the JGSL parser ">
+        <java classname="jgsl.parser.JGSL_Parser"
+              fork="true"
+              failonerror="true"
+              maxmemory="128m"
+                >
+            <classpath>
+                <fileset refid="dist.jars"/>
+            </classpath>
+            <arg line="${jgsl.args}"/>
+        </java>
+    </target>
+
+    <target name="javaccCompileStatus">
+        <uptodate property="jgsl.javacc.notRequired">
+            <srcfiles dir="parser" includes="JGSL_Parser.jj"/>
+            <mapper type="glob" from="*.jj" to="${src}/jgsl/parser/*.java"/>
+        </uptodate>
+
+    </target>
+
+    <target name="jgsl.javacc"
+            description="build JGSL the parser" depends="javaccCompileStatus" unless="jgsl.javacc.notRequired">
+        <echo message="Generating the JGSL parser"/>
+        <mkdir dir="${src}/jgsl/parser"/>
+        <!--        <antcall target="jgsl.jjtree"/>-->
+        <javacc
+                target="parser/JGSL_Parser.jj"
+                outputdirectory="${src}/jgsl/parser"
+                javacchome="${lib}"
+                />
+    </target>
+
+    <path id="uidesigner.classpath">
+        <fileset dir="${lib}">
+            <include name="idea_bcel.jar"/>
+            <include name="idea_javac2.jar"/>
+            <include name="idea_jdom.jar"/>
+        </fileset>
+    </path>
+
+    <taskdef
+            name="uidesigner"
+            classname="com.intellij.uiDesigner.ant.Javac2"
+            classpathref="uidesigner.classpath"/>
+
+    <target name="ideaGUICompileStatus">
+        <uptodate property="ideaGUI.compile.notRequired">
+            <srcfiles dir="${src}" includes="**/*.form"/>
+            <mapper type="glob" from="*.form" to="${build.classes}/*.class"/>
+        </uptodate>
+
+    </target>
+
+    <target name="uidesigner.compile" depends="ideaGUICompileStatus"
+            unless="ideaGUI.compile.notRequired"
+            description="Compile the IDEA GUI forms">
+        <echo message="Compiling the IDEA GUI designer source"/>
+        <uidesigner verbose="true" source="true" srcdir="${src}"
+                    destdir="${build.classes}"
+                    debug="on"
+                >
+            <src path="${src}"/>
+            <include name="**/*.form"/>
+            <classpath refid="uidesigner.classpath"/>
+            <classpath path="${build.classes}"/>
+        </uidesigner>
+    </target>
+
+    <target name="test" depends="compile">
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath>
+                <pathelement path="${build.classes}"/>
+                <fileset refid="lib.jars"/>
+                <pathelement path="${java.class.path}"/>
+            </classpath>
+
+            <formatter type="plain"/>
+
+            <batchtest fork="yes" todir="${test}">
+                <fileset dir="${src}">
+                    <include name="**/*Test.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+
+    <target name="bcel">
+        <java fork="true"
+              classname="org.apache.bcel.util.BCELifier" output="${basedir}/src/jgsl/view/swing/BaseFrameCreator.java">
+            <arg line="${basedir}/build/classes/jgsl/view/swing/BaseFrame.class"/>
+            <classpath>
+                <path location="${build.classes}"/>
+                <fileset refid="lib.jars"/>
+            </classpath>
+
+        </java>
+
+    </target>
+
+    <!-- The task requires the following libraries from IntelliJ IDEA distribution: -->
+    <!--   javac2.jar; jdom.jar; bcel.jar -->
+    <taskdef name="javac2" classname="com.intellij.uiDesigner.ant.Javac2" classpathref="uidesigner.classpath"/>
+
+    <property name="compiler.args.jgsl_ide" value="${compiler.args}"/>
+
+    <target name="compile.module.jgsl_ide.production" description="compile module(s) JGSL_IDE production classes">
+        <mkdir dir="${build.classes}"/>
+        <javac2 destdir="${build.classes}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}"
+                memoryMaximumSize="${compiler.max.memory}" fork="true"
+                >
+            <!--executable="${module.jdk.home.jgsl_ide}/bin/javac"-->
+            <compilerarg line="${compiler.args.jgsl_ide}"/>
+            <classpath>
+                <path location="${build.classes}"/>
+                <fileset refid="lib.jars"/>
+            </classpath>
+            <!--<classpath refid="jgsl_ide.module.classpath"/>-->
+            <src path="${src}"/>
+        </javac2>
+
+<!--
+        <copy todir="${jgsl_ide.output.dir}">
+        <fileset dir="${module.jgsl_ide.basedir}/src">
+          <patternset refid="compiler.resources"/>
+          <type type="file"/>
+        </fileset>
+      </copy>
+-->
+    </target>
+
+
+</project>

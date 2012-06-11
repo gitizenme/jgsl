@@ -1,0 +1,16 @@
+TODO List
+
+
+* Add "javadoc" target to build.xml
+* Write Linux installer
+* Write windows installer
+* varargs for BaseFrame draw* methods
+
+* Add support for command attributes
+* Add support for declaration of objects
+
+* Visual script editor Ð draw the graphics objects and generate the script
+* 3D support Ð script 3D objects
+* Animation Ð cycle through images
+* GUI Toolkits Ð support other GUI toolkits (SWT, etc.)
+

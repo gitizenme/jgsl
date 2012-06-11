@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id4thfne91k48g8e91lcwsh">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="EJBAssemblyDiagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:view:::id19o4oe91k48g8e91lf3hh">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,10,111,60"/>
+        </reference>
+    </view>
+</nodeSet>

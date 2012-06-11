@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="jgsl.view.swing.JGSLSwingFrame">
+  <grid id="3efac" binding="mainPanel" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="3" y="4" width="840" height="405"/>
+      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="1d3d7" binding="scriptPanel" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="0" y="0" width="840" height="232"/>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+            <minimum-size width="320" height="200"/>
+            <preferred-size width="640" height="480"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="bevel-lowered" title="Script Editor"/>
+        <children>
+          <scrollpane id="14707" binding="scriptScrollPane">
+            <constraints>
+              <xy x="6" y="22" width="828" height="204"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="a2e27" class="javax.swing.JTextArea" binding="scriptTextArea">
+                <constraints/>
+                <properties/>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <grid id="86b47" binding="actionPanel" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="0" y="321" width="455" height="84"/>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+        </constraints>
+        <properties/>
+        <border type="etched" title="Scipt Actions"/>
+        <children>
+          <component id="81538" class="javax.swing.JButton" binding="viewButton">
+            <constraints>
+              <xy x="6" y="35" width="75" height="29"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1"/>
+            </constraints>
+            <properties>
+              <text value="View"/>
+              <toolTipText value="View your JGLS script."/>
+            </properties>
+          </component>
+          <component id="a22f9" class="javax.swing.JButton" binding="jarButton">
+            <constraints>
+              <xy x="91" y="35" width="93" height="29"/>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1"/>
+            </constraints>
+            <properties>
+              <text value="Create JAR"/>
+              <toolTipText value="Create an executable JAR file from your JGSL script."/>
+            </properties>
+          </component>
+          <grid id="d091" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <xy x="194" y="22" width="235" height="56"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="6286a" class="javax.swing.JButton" binding="selectScriptOutputButton">
+                <constraints>
+                  <xy x="160" y="27" width="75" height="29"/>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1"/>
+                </constraints>
+                <properties>
+                  <text value="Select"/>
+                  <toolTipText value="Press this button to enter a file name."/>
+                </properties>
+              </component>
+              <component id="361b" class="javax.swing.JTextField" binding="scriptOutputFileName">
+                <constraints>
+                  <xy x="0" y="30" width="150" height="22"/>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <inheritsPopupMenu value="false"/>
+                  <text value="jgsl_image.jpg"/>
+                  <toolTipText value="File name to which your JGSL script image will be saved to."/>
+                </properties>
+              </component>
+              <component id="f1fd6" class="javax.swing.JCheckBox" binding="saveSciptOutputCheckBox">
+                <constraints>
+                  <xy x="0" y="0" width="140" height="22"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0"/>
+                </constraints>
+                <properties>
+                  <text value="Save script output"/>
+                  <toolTipText value="Check this to generate an image from your JGSL script."/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="8d9b2" binding="statusPanel" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="0" y="237" width="840" height="79"/>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+        </constraints>
+        <properties/>
+        <border type="bevel-lowered" title="Status"/>
+        <children>
+          <scrollpane id="e1cf" binding="statusScrollPane">
+            <constraints>
+              <xy x="6" y="22" width="828" height="51"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="d9ee2" class="javax.swing.JList" binding="statusList">
+                <constraints/>
+                <properties>
+                  <toolTipText value="Status of JGSL actions."/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

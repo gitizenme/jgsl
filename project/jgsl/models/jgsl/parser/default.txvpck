@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="idhhfvbe5xx4yvxe5xx6vsf">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="jdt:e_class:src:jgsl.parser.JGSL_ParserTokenManager">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference11" referencedUin="jdt:e_class:src:jgsl.parser.JGSL_ParserConstants">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference12" referencedUin="jdt:e_class:src:jgsl.parser.JGSL_Parser">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference13" referencedUin="jdt:e_class:src:jgsl.parser.Token">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference14" referencedUin="jdt:e_class:src:jgsl.parser.JavaCharStream">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference15" referencedUin="jdt:e_class:src:jgsl.parser.ParseException">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference16" referencedUin="jdt:e_class:src:jgsl.parser.TokenMgrError">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

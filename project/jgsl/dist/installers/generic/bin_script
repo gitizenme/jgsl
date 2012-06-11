@@ -1,0 +1,24 @@
+#!/bin/sh
+PATH=/bin:/usr/bin
+base=sut.$$
+outname_tar=$base.tar
+tempdir=spottmp.$$
+mkdir $tempdir
+echo "Unpacking..."
+tail +25 $0 > $outname_tar
+echo "Extracting..."
+(cd $tempdir; tar xvf ../$outname_tar)
+  savestatus=$?
+  if [ $savestatus != "0" ]; then
+    echo status from tar = $savestatus
+    echo ABORTING INSTALLATION
+    /bin/rm -rf $tempdir
+    /bin/rm -f $outname_tar
+    exit $savestatus
+    fi
+echo "cleaning up..."
+/bin/rm $outname_tar
+echo "installing..."
+(cd $tempdir; ./INSTALL)
+/bin/rm -rf $tempdir
+exit 0

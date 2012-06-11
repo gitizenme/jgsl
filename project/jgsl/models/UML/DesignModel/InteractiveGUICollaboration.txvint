@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id7xiq5e8dl1ej9e8do2olr">
+        <property name="$viewType" value="collaborationView"/>
+        <property name="$metaclass" value="Collaboration Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="520,270,102,60"/>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkidfbcse8dl1ej9e8dtylna:id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi">
+                <property name="col_bounds" value="565,435,190,14"/>
+                <reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkidfbcse8dl1ej9e8dtylna:id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi">
+                    <property name="col_bounds" value="1085,705,190,14"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.nodeid10zvve8dl1ej9e8dtyv92:id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi">
+                <property name="col_bounds" value="602,507,0,0"/>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkid5pf8xe8dl1ej9e8dtyloq:id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi">
+                <property name="col_sourceAnchor" value="561,330"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="561,560"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference85" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="520,560,102,60"/>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid5inlfe8dl1ej9e8dtzct5:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                <property name="col_bounds" value="271,570,219,14"/>
+                <reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid5inlfe8dl1ej9e8dtzct5:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                    <property name="col_bounds" value="808,1130,219,14"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid564gve8dl1ej9e8dtyog5:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                <property name="col_sourceAnchor" value="622,590"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="790,590"/>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid7sedke8dl1ej9e8dtyofm:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                <property name="col_bounds" value="633,570,147,14"/>
+                <reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid7sedke8dl1ej9e8dtyofm:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                    <property name="col_bounds" value="1153,1130,147,14"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid677q4e8dl1ej9e8dtzctj:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                <property name="col_sourceAnchor" value="520,590"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="240,590"/>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid92exye8dl1ej9e8dtys7n:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                <property name="col_sourceAnchor" value="525,560"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="366,450"/>
+            </reference>
+            <reference referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.nodeid33kyde8dl1ej9e8dtylo8:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                <property name="col_bounds" value="841,797,0,0"/>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid44hn6e8dl1ej9e8dtys6u:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                <property name="col_bounds" value="214,505,227,14"/>
+                <reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid44hn6e8dl1ej9e8dtys6u:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+                    <property name="col_bounds" value="734,1065,227,14"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference86" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="790,560,130,60"/>
+            <reference referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb.nodeid4of48e8dl1ej9e8dtyofz:id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb">
+                <property name="col_bounds" value="995,637,0,0"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference87" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="280,390,113,60"/>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy.linkideksce8dl1ej9e8du9mfm:id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy">
+                <property name="col_sourceAnchor" value="330,390"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="330,330"/>
+                <reference referencedUin="linklabel:label:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy.linkideksce8dl1ej9e8du9mfm:id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy">
+                    <property name="col_bounds" value="334,351,114,14"/>
+                    <property name="col_bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy.nodeid3mx7ke8dl1ej9e8dtys7h:id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy">
+                <property name="col_bounds" value="699,467,0,0"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference88" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="460,50,226,60"/>
+            <property name="col_bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid4tdq3e8dl1ej9e8dtyv8q:id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u">
+                <property name="col_bounds" value="575,180,249,14"/>
+                <reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid4tdq3e8dl1ej9e8dtyv8q:id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u">
+                    <property name="col_bounds" value="1035,230,249,14"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid312jce8dl1ej9e8dtyv97:id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u">
+                <property name="col_sourceAnchor" value="571,110"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="571,270"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference91" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="10,270,123,60"/>
+            <reference referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n.nodeid9bwhme8dl1ej9e8dtzhi0:id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n">
+                <property name="col_bounds" value="320,897,0,0"/>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n.linkid49umfe8dl1ej9e8dudmn1:id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n">
+                <property name="col_sourceAnchor" value="133,300"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="240,300"/>
+                <reference referencedUin="linklabel:label:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n.linkid49umfe8dl1ej9e8dudmn1:id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n">
+                    <property name="col_bounds" value="151,282,70,14"/>
+                    <property name="col_bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference92" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="10,560,230,60"/>
+            <property name="col_bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.nodeidhemoe8dl1ej9e8dtzctf:id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul">
+                <property name="col_bounds" value="280,1047,0,0"/>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid3xeq9e8dl1ej9e8dtzhhr:id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul">
+                <property name="col_bounds" value="75,435,160,14"/>
+                <reference referencedUin="linklabel:$messageInplaceEditing:design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid3xeq9e8dl1ej9e8dtzhhr:id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul">
+                    <property name="col_bounds" value="85,995,160,14"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid6hj7we8dl1ej9e8dtzhi5:id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul">
+                <property name="col_sourceAnchor" value="71,560"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="71,330"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference94" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="background_color" value="255,255,255"/>
+            <property name="col_bounds" value="30,20,67,87"/>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid6ttfhe8dl1ej9e8du0a5d:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="col_sourceAnchor" value="57,107"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="57,270"/>
+                <reference referencedUin="linklabel:label:design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid6ttfhe8dl1ej9e8du0a5d:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                    <property name="col_bounds" value="61,179,71,14"/>
+                    <property name="col_bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="linklabel:clientRole:design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid6ttfhe8dl1ej9e8du0a5d:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                    <property name="col_bounds" value="61,107,32,14"/>
+                    <property name="col_bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid5hjvce8dl1ej9e8du06q1:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="col_sourceAnchor" value="97,80"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="460,80"/>
+                <reference referencedUin="linklabel:label:design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid5hjvce8dl1ej9e8du06q1:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                    <property name="col_bounds" value="229,62,89,14"/>
+                    <property name="col_bounds_setted_by_user" value="true"/>
+                </reference>
+                <reference referencedUin="linklabel:clientRole:design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid5hjvce8dl1ej9e8du06q1:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                    <property name="col_bounds" value="101,80,32,14"/>
+                    <property name="col_bounds_setted_by_user" value="true"/>
+                </reference>
+            </reference>
+        </reference>
+        <reference df-class-name="reference95" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6p49ce8dl1ej9e8du5xzj">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="240,270,170,60"/>
+        </reference>
+        <reference df-class-name="reference96" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid8qng5e8dl1ej9e8dug27d">
+            <property name="$shortcutReference" value="true"/>
+            <property name="col_bounds" value="210,150,260,70"/>
+            <property name="col_bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid8qng5e8dl1ej9e8dug27d.linkid5eu5oe8dl1ej9e8duioxe:id7xiq5e8dl1ej9e8do2olr.nodeid8qng5e8dl1ej9e8dug27d">
+                <property name="col_sourceAnchor" value="325,220"/>
+                <property name="col_bendpoints" value=""/>
+                <property name="col_targetAnchor" value="325,270"/>
+            </reference>
+        </reference>
+    </view>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="se"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkid86m7ye8dl1ej9e8dtrh1k">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.controller.script.ScriptEngine"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkidfbcse8dl1ej9e8dtylna">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi"/>
+            <property name="$metaclass" value="Message Link"/>
+            <property name="sendingInstant" value="175"/>
+            <property name="processingDuration" value="190"/>
+            <property name="sequenceNumber" value="2"/>
+            <property name="diagram_uniqe_name" value="design:view:::id7xiq5e8dl1ej9e8do2olr"/>
+            <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkidfbcse8dl1ej9e8dtylna.operation">
+                <property name="$metaclass" value="Dependency Link"/>
+                <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkidfbcse8dl1ej9e8dtylna:id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi"/>
+                <participant role="Supplier" referencedUin="jdt:e_method:src:jgsl.io.ScriptParser.execScript:execScript~Ljava.io.File;"/>
+            </link>
+            <property name="@operationNameAsText" value="&apos;execScript(File):JGSLScript&apos;"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkid5pf8xe8dl1ej9e8dtyloq">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi"/>
+            <property name="$metaclass" value="Messages Link"/>
+        </link>
+        <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.nodeid10zvve8dl1ej9e8dtyv92">
+            <property name="$metaclass" value="Activation"/>
+            <property name="$name" value="Activation4"/>
+            <property name="messageUid" value="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid4tdq3e8dl1ej9e8dtyv8q:id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u"/>
+        </node>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="sp"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid80iw5e8dl1ej9e8dtrxc6">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.io.ScriptParser"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+        <node uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.nodeid33kyde8dl1ej9e8dtylo8">
+            <property name="$metaclass" value="Activation"/>
+            <property name="$name" value="Activation1"/>
+            <property name="messageUid" value="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi.linkidfbcse8dl1ej9e8dtylna:id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi"/>
+        </node>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid7sedke8dl1ej9e8dtyofm">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <property name="$metaclass" value="Message Link"/>
+            <property name="sendingInstant" value="195"/>
+            <property name="processingDuration" value="20"/>
+            <property name="sequenceNumber" value="2.1"/>
+            <property name="diagram_uniqe_name" value="design:view:::id7xiq5e8dl1ej9e8do2olr"/>
+            <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid7sedke8dl1ej9e8dtyofm.operation">
+                <property name="$metaclass" value="Dependency Link"/>
+                <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid7sedke8dl1ej9e8dtyofm:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+                <participant role="Supplier" referencedUin="jdt:e_method:src:jgsl.parser.JGSL_Parser.parseScript:parseScript"/>
+            </link>
+            <property name="@operationNameAsText" value="&apos;parseScript():void&apos;"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid564gve8dl1ej9e8dtyog5">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <property name="$metaclass" value="Messages Link"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid44hn6e8dl1ej9e8dtys6u">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <property name="$metaclass" value="Message Link"/>
+            <property name="sendingInstant" value="235"/>
+            <property name="processingDuration" value="50"/>
+            <property name="sequenceNumber" value="2.2"/>
+            <property name="diagram_uniqe_name" value="design:view:::id7xiq5e8dl1ej9e8do2olr"/>
+            <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid44hn6e8dl1ej9e8dtys6u.operation">
+                <property name="$metaclass" value="Dependency Link"/>
+                <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid44hn6e8dl1ej9e8dtys6u:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+                <participant role="Supplier" referencedUin="jdt:e_method:src:jgsl.model.JGSLScript.generateImplementation:generateImplementation"/>
+            </link>
+            <property name="@operationNameAsText" value="&apos;generateImplementation():String&apos;"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid92exye8dl1ej9e8dtys7n">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <property name="$metaclass" value="Messages Link"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid5inlfe8dl1ej9e8dtzct5">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <property name="$metaclass" value="Message Link"/>
+            <property name="sendingInstant" value="305"/>
+            <property name="processingDuration" value="50"/>
+            <property name="sequenceNumber" value="2.3"/>
+            <property name="diagram_uniqe_name" value="design:view:::id7xiq5e8dl1ej9e8do2olr"/>
+            <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid5inlfe8dl1ej9e8dtzct5.operation">
+                <property name="$metaclass" value="Dependency Link"/>
+                <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid5inlfe8dl1ej9e8dtzct5:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+                <participant role="Supplier" referencedUin="jdt:e_method:src:jgsl.view.swing.SwingScriptViewer.renderScript:renderScript~Ljava.lang.String;~Ljava.lang.String;"/>
+            </link>
+            <property name="@operationNameAsText" value="&apos;renderScript(String,String):void&apos;"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid677q4e8dl1ej9e8dtzctj">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+            <property name="$metaclass" value="Messages Link"/>
+        </link>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="parser"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb.linkid645vne8dl1ej9e8dts9e5">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.parser.JGSL_Parser"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+        <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid6zbtie8dl1ej9e8dts0cb.nodeid4of48e8dl1ej9e8dtyofz">
+            <property name="$metaclass" value="Activation"/>
+            <property name="$name" value="Activation2"/>
+            <property name="messageUid" value="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid7sedke8dl1ej9e8dtyofm:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+        </node>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="script"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy.linkid7pc90e8dl1ej9e8dtsump">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.model.JGSLScript"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+        <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy.nodeid3mx7ke8dl1ej9e8dtys7h">
+            <property name="$metaclass" value="Activation"/>
+            <property name="$name" value="Activation3"/>
+            <property name="messageUid" value="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid44hn6e8dl1ej9e8dtys6u:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+        </node>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy.linkideksce8dl1ej9e8du9mfm">
+            <property name="@link" value="aggregationByValue"/>
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6p49ce8dl1ej9e8du5xzj"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40pj4e8dl1ej9e8dtscsy"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@label" value="generates subclass"/>
+        </link>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="gui"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid1oclae8dl1ej9e8dttnnb">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.view.swing.JGSLSwingFrame"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid4tdq3e8dl1ej9e8dtyv8q">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u"/>
+            <property name="$metaclass" value="Message Link"/>
+            <property name="sendingInstant" value="135"/>
+            <property name="processingDuration" value="20"/>
+            <property name="sequenceNumber" value="1"/>
+            <property name="diagram_uniqe_name" value="design:view:::id7xiq5e8dl1ej9e8do2olr"/>
+            <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid4tdq3e8dl1ej9e8dtyv8q.operation">
+                <property name="$metaclass" value="Dependency Link"/>
+                <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid4tdq3e8dl1ej9e8dtyv8q:id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u"/>
+                <participant role="Supplier" referencedUin="jdt:e_method:src:jgsl.controller.script.ScriptEngine.viewInteractive:viewInteractive~Ljava.io.File;~Ljava.lang.String;"/>
+            </link>
+            <property name="@operationNameAsText" value="&apos;viewInteractive(File,String):JGSLScript&apos;"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u.linkid312jce8dl1ej9e8dtyv97">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid59ry2e8dl1ej9e8dtr1wi"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u"/>
+            <property name="$metaclass" value="Messages Link"/>
+        </link>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="viewer"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n.linkid8ni9oe8dl1ej9e8dtu6yk">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.view.swing.JGSLViewer"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+        <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n.nodeid9bwhme8dl1ej9e8dtzhi0">
+            <property name="$metaclass" value="Activation"/>
+            <property name="$name" value="Activation6"/>
+            <property name="messageUid" value="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid3xeq9e8dl1ej9e8dtzhhr:id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul"/>
+        </node>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n.linkid49umfe8dl1ej9e8dudmn1">
+            <property name="@link" value="aggregationByValue"/>
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6p49ce8dl1ej9e8du5xzj"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@label" value="instantiates"/>
+        </link>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="viewGenerator"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid3wk3je8dl1ej9e8dtuppw">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.view.swing.SwingScriptViewer"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+        <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.nodeidhemoe8dl1ej9e8dtzctf">
+            <property name="$metaclass" value="Activation"/>
+            <property name="$name" value="Activation5"/>
+            <property name="messageUid" value="design:link:::id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u.linkid5inlfe8dl1ej9e8dtzct5:id7xiq5e8dl1ej9e8do2olr.nodeidw8zwe8dl1ej9e8dtrn3u"/>
+        </node>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid3xeq9e8dl1ej9e8dtzhhr">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul"/>
+            <property name="$metaclass" value="Message Link"/>
+            <property name="sendingInstant" value="325"/>
+            <property name="processingDuration" value="20"/>
+            <property name="sequenceNumber" value="2.3.1"/>
+            <property name="diagram_uniqe_name" value="design:view:::id7xiq5e8dl1ej9e8do2olr"/>
+            <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid3xeq9e8dl1ej9e8dtzhhr.operation">
+                <property name="$metaclass" value="Dependency Link"/>
+                <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid3xeq9e8dl1ej9e8dtzhhr:id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul"/>
+                <participant role="Supplier" referencedUin="jdt:e_method:src:jgsl.view.swing.JGSLViewer.main:main~[Ljava.lang.String;"/>
+            </link>
+            <property name="@operationNameAsText" value="&apos;main(String[]):void&apos;"/>
+        </link>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul.linkid6hj7we8dl1ej9e8dtzhi5">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6x899e8dl1ej9e8dtudul"/>
+            <property name="$metaclass" value="Messages Link"/>
+        </link>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid6p49ce8dl1ej9e8du5xzj">
+        <property name="$metaclass" value="Object"/>
+        <property name="$name" value="implementation"/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid6p49ce8dl1ej9e8du5xzj.linkid3vfnae8dl1ej9e8du67rz">
+            <participant role="Supplier" referencedUin="jdt:e_class:src:jgsl.view.swing.BaseFrame"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6p49ce8dl1ej9e8du5xzj"/>
+            <property name="$metaclass" value="Dependency Link"/>
+        </link>
+    </node>
+    <node uin="id7xiq5e8dl1ej9e8do2olr.nodeid8qng5e8dl1ej9e8dug27d">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note1"/>
+        <property name="$note_text" value="A subclass is BaseFrame is generated at runtime by the JGSLScript class. The JGSLViewer creates and instance of the subclass and displays it to the user."/>
+        <link uin="id7xiq5e8dl1ej9e8do2olr.nodeid8qng5e8dl1ej9e8dug27d.linkid5eu5oe8dl1ej9e8duioxe">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6p49ce8dl1ej9e8du5xzj"/>
+            <participant role="Client" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid8qng5e8dl1ej9e8dug27d"/>
+            <property name="$metaclass" value="Note Link"/>
+        </link>
+    </node>
+</nodeSet>

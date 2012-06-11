@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id3elzae5xx4yvxe5xx6vpx">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:view:::idhhfvbe5xx4yvxe5xx6vsf">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.parser"/>
+            <property name="bounds" value="216,10,173,200"/>
+        </reference>
+        <reference df-class-name="reference5" referencedUin="design:view:::idbpphne5xx4yvxe5xx6vt9">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.prototype"/>
+            <property name="bounds" value="172,250,87,104"/>
+        </reference>
+        <reference df-class-name="reference6" referencedUin="design:view:::id2qx4ge5xx4yvxe5xx6vu3">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.resources"/>
+            <property name="bounds" value="10,10,83,95"/>
+        </reference>
+        <reference df-class-name="reference7" referencedUin="design:view:::ide4ws2e5xx4yvxe5xx6vrb">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.io"/>
+            <property name="bounds" value="10,290,142,168"/>
+        </reference>
+        <reference df-class-name="reference9" referencedUin="design:view:::idbew43e5xx4yvxe5xxa72n">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.model"/>
+            <property name="bounds" value="113,10,83,95"/>
+        </reference>
+        <reference df-class-name="reference10" referencedUin="jdt:e_class:src:jgsl.JGSL">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="10,150,108,94"/>
+        </reference>
+        <reference df-class-name="reference2" referencedUin="design:view:::id9tznse6cow23xe6cowo1x">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.util"/>
+        </reference>
+        <reference df-class-name="reference3" referencedUin="design:view:::id94vv6e6cow23xe6cowo2i">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.view"/>
+        </reference>
+        <reference df-class-name="reference4" referencedUin="design:view:::id3j4xee6cow23xe6cownyv">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.controller"/>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

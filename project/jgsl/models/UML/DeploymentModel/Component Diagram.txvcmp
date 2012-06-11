@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id3un9je91k48g8e91lftjb">
+        <property name="$metaclass" value="Component Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id3un9je91k48g8e91lftjb.nodeid319y5e91k48g8e91lfwas">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="40,40,103,60"/>
+        </reference>
+        <reference df-class-name="reference38" referencedUin="design:node:::id3un9je91k48g8e91lftjb.nodeid9w2pee91k48g8e91lg1ky">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="230,40,109,60"/>
+        </reference>
+        <reference df-class-name="reference43" referencedUin="design:node:::id3un9je91k48g8e91lftjb.nodeid36dk5e91k48g8e91ljyac">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="40,140,100,60"/>
+        </reference>
+        <reference df-class-name="reference44" referencedUin="design:node:::id3un9je91k48g8e91lftjb.nodeid7c14ae91k48g8e91lkaqp">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="230,140,104,60"/>
+        </reference>
+    </view>
+    <node uin="id3un9je91k48g8e91lftjb.nodeid319y5e91k48g8e91lfwas">
+        <property name="$metaclass" value="Component"/>
+        <property name="$name" value="jgsl.exe"/>
+    </node>
+    <node uin="id3un9je91k48g8e91lftjb.nodeid9w2pee91k48g8e91lg1ky">
+        <property name="$metaclass" value="Component"/>
+        <property name="$name" value="jgslc.exe"/>
+    </node>
+    <node uin="id3un9je91k48g8e91lftjb.nodeid36dk5e91k48g8e91ljyac">
+        <property name="$metaclass" value="Component"/>
+        <property name="$name" value="jgsl.sh"/>
+    </node>
+    <node uin="id3un9je91k48g8e91lftjb.nodeid7c14ae91k48g8e91lkaqp">
+        <property name="$metaclass" value="Component"/>
+        <property name="$name" value="jgsl.app"/>
+    </node>
+</nodeSet>

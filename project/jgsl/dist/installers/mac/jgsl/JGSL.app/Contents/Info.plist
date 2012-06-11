@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>CFBundleName</key>
+	<string>JGSL</string>
+	<key>CFBundleIdentifier</key>
+	<string>jgsl</string>
+	<key>CFBundleVersion</key>
+	<string>0.5.0</string>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<string>true</string>
+	<key>CFBundleExecutable</key>
+	<string>JavaApplicationStub</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleGetInfoString</key>
+	<string>The Java Graphics Scripting Language</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleIconFile</key>
+	<string>jgsl.icns</string>
+	<key>Java</key>
+	<dict>
+		<key>MainClass</key>
+		<string>jgsl.JGSL</string>
+		<key>JVMVersion</key>
+		<string>1.5*</string>
+		<key>ClassPath</key>
+			<array>
+			<string>$JAVAROOT/commons-cli-1.0.jar</string>
+			<string>$JAVAROOT/idea_forms_rt.jar</string>
+			<string>$JAVAROOT/javassist.jar</string>
+			<string>$JAVAROOT/jgsl.jar</string>
+			<string>$JAVAROOT/log4j-1.2.9.jar</string>
+			</array>
+		<key>Properties</key>
+		<dict>
+			<key>apple.laf.useScreenMenuBar</key>
+			<string>true</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

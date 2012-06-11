@@ -1,0 +1,91 @@
+/*
+All JGSL errors
+*/
+
+begin
+
+DOC ""
+DOC "Command: canvas"
+DOC ""
+DOC "The command canvas creates a canvas with the specified width and height and the background and foreground colors."
+DOC "The canvas can only be initized once"
+DOC ""
+DOC "   canvas (width, height, background_color, foreground_color);"
+DOC "       width - number representing the width of the canvas"
+DOC "       height - number representing the height of the canvas"
+DOC "       background_color - One of the default colors or a declared <color>"
+DOC "       foreground_color - One of the default colors or a declared <color>"
+DOC "       title - Title of the script (optional - defaults to 'JGSL Viewer')"
+DOC ""
+canvas (x, y, BLUE, WHITE, "All Commands");
+clear;
+
+DOC ""
+DOC "Command: clear"
+DOC ""
+DOC "Clear the canvas"
+DOC ""
+DOC "   clear;"
+text (25, "y", "Clearing the canvas in 2 seconds");
+wait(2);
+clear;
+
+DOC "draw (x1, y1);"
+text (25, 100, "Drawing a single point at 100, 100");
+draw (100,100);
+wait(2);
+clear;
+
+DOC ""
+DOC "Command: text"
+DOC ""
+DOC "Draw text on the canvas"
+DOC ""
+DOC "   text (x, y, message);"
+DOC "       x - x-coordinate of the start of the text"
+DOC "       y - y-coordinate of the start of the text"
+DOC "       message - text to draw on canvas"
+DOC ""
+text (25, 100, "This is a text string");
+wait(2);
+clear;
+
+DOC "rectangle (x1, y1, width, height);"
+
+DOC "square (x1, y1);"
+
+DOC "circle (x1, y1, radius);"
+
+DOC "elipse (x1, y1, x2, y2);"
+
+DOC "arc(x, y, width, height, start angle, ang extent);"
+
+DOC "polygon (x1, y1, ...);"
+
+DOC "line (x1, y1, x2, y2);"
+text (25, 100, "Drawing a line: 125, 125, 250, 175");
+line (125, 125, 250, 300);
+wait(2);
+clear;
+
+DOC "wait (seconds);"
+text (25, 100, "Waiting for 2 seconds..");
+wait(2);
+clear;
+
+DOC "log (message);"
+
+DOC "debug (message);"
+
+DOC "warning (message);"
+
+DOC "write (file name);"
+
+DOC "read (file name);"
+
+DOC "jgsl;"
+
+DOC "version;"
+
+end
+

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id98dz1e8dl1ej9e8dnci3o">
+        <property name="$description" value="The JGSL User is the primary actor that will use the GUI and console interfaces."/>
+        <property name="$metaclass" value="Use Case Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="255,255,255"/>
+            <property name="bounds" value="10,30,240,110"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference64" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="255,255,255"/>
+            <property name="bounds" value="20,210,220,110"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+    </view>
+    <node uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+        <property name="$description" value="The JGSL User is the primary actor that will use the GUI and console interfaces."/>
+        <property name="$metaclass" value="Actor"/>
+        <property name="$name" value="JGSL User"/>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid45o4te8dl1ej9e8dnhzrp">
+            <participant role="Supplier" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid8bmwoe8dl1ej9e8dng5er"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid6dhfse8dl1ej9e8dnicbj">
+            <participant role="Supplier" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid3xztie8dl1ej9e8dngikz"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid8l2ete8dl1ej9e8dnidx4">
+            <participant role="Supplier" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid9t9pse8dl1ej9e8dngqyl"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid76i9ae8dl1ej9e8dnifc0">
+            <participant role="Supplier" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid63kgae8dl1ej9e8dnh2s3"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid7r3gpe8dl1ej9e8dnih7j">
+            <participant role="Supplier" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid5cy4ce8dl1ej9e8dnhdy6"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid7h60ze8dl1ej9e8dnijdh">
+            <participant role="Supplier" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid4zeoe8dl1ej9e8dnhngk"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid7har4e8dl1ej9e8dnpuwi">
+            <participant role="Supplier" referencedUin="design:node:::id1h5lne8dl1ej9e8dnobif.nodeid9qsv9e8dl1ej9e8dnouqh"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid4myvce8dl1ej9e8dnpx7u">
+            <participant role="Supplier" referencedUin="design:node:::id1h5lne8dl1ej9e8dnobif.nodeid7y40te8dl1ej9e8dnpadm"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid5hjvce8dl1ej9e8du06q1">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid6onk0e8dl1ej9e8dtsx7u"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@label" value="executes script"/>
+            <property name="@clientRole" value="user"/>
+        </link>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid6ttfhe8dl1ej9e8du0a5d">
+            <participant role="Supplier" referencedUin="design:node:::id7xiq5e8dl1ej9e8do2olr.nodeid40oi5e8dl1ej9e8dttq5n"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@label" value="views script"/>
+            <property name="@clientRole" value="user"/>
+        </link>
+    </node>
+    <node uin="id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu">
+        <property name="$description" value="The JGSL Developer is the primary actor for using the JGSL ScriptEngine."/>
+        <property name="$metaclass" value="Actor"/>
+        <property name="$name" value="JGSL Developer"/>
+        <link uin="id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu.linkid1wwgfe8dl1ej9e8dnrblh">
+            <participant role="Supplier" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid5cy4ce8dl1ej9e8dnhdy6"/>
+            <participant role="Client" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu"/>
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@stereotype" value="communicate"/>
+        </link>
+    </node>
+</nodeSet>

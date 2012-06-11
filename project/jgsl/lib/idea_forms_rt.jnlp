@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+      codebase="http://zander.local/~jchavez/jnlp"
+      href="http://zander.local/~jchavez/jnlp/idea_forms_rt.jnlp">
+
+    <information>
+        <title>IntelliJ IDEA GUI Forms Runtime</title>
+        <description>Part of the  Java Graphics Scripting Language (JGSL) distribution.</description>
+        <vendor>JetBrains</vendor>
+    </information>
+
+    <resources>
+        <j2se version="1.5"/>
+        <jar href="idea_forms_rt.jar"/>
+    </resources>
+
+    <component-desc/>
+
+    <security>
+        <all-permissions/>
+    </security>
+</jnlp>

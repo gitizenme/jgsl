@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <link uin="id9fdore91k48g8e91ke7vc.linkid15u6me91k48g8e91ked33">
+        <property name="$metaclass" value="Dependency Link"/>
+        <participant role="Supplier" referencedUin="design:view:::id8hz6ne1xmuz9ze1xnph8s"/>
+        <participant role="Client" referencedUin="design:view:::id9fdore91k48g8e91ke7vc"/>
+    </link>
+    <view uin="id9fdore91k48g8e91ke7vc">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="Component Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="255,255,0"/>
+            <property name="bounds" value="50,290,210,230"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb.nodeidvim1e91k48g8e91kitm8:id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb">
+                <property name="bounds" value="30,60,160,60"/>
+            </reference>
+            <reference referencedUin="design:link:::id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb.linkid9m3rbe91k48g8e91knoqp:id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb">
+                <property name="sourceAnchor" value="155,290"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="155,230"/>
+            </reference>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb.nodeid7f54ne91k48g8e91khkv3:id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb">
+                <property name="bounds" value="50,150,100,60"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference8" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="255,255,0"/>
+            <property name="bounds" value="310,320,200,140"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq.nodeid80wlxe91k48g8e91kj119:id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq">
+                <property name="bounds" value="40,60,100,60"/>
+            </reference>
+            <reference referencedUin="design:link:::id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq.linkid9kv31e91k48g8e91kns09:id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq">
+                <property name="sourceAnchor" value="385,320"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="385,230"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference13" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,255,51"/>
+            <property name="bounds" value="540,10,230,220"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya.linkid9s1doe91k48g8e91knuix:id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya">
+                <property name="sourceAnchor" value="540,120"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="460,120"/>
+            </reference>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya.nodeid3pahce91k48g8e91kk2sz:id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya">
+                <property name="bounds" value="40,50,157,60"/>
+            </reference>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya.nodeid6w18se91k48g8e91kkg88:id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya">
+                <property name="bounds" value="40,140,160,60"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference14" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="background_color" value="255,255,255"/>
+            <property name="bounds" value="590,360,98,87"/>
+        </reference>
+        <reference df-class-name="reference20" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="10,10,450,220"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid42zape91k48g8e91kn524:id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3">
+                <property name="bounds" value="80,140,125,60"/>
+            </reference>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid3w035e91k48g8e91klgh6:id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3">
+                <property name="bounds" value="270,30,131,60"/>
+            </reference>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid81jyde91k48g8e91kmy7o:id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3">
+                <property name="bounds" value="70,50,132,60"/>
+            </reference>
+            <reference referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid8y6lve91k48g8e91klwnf:id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3">
+                <property name="bounds" value="270,130,134,60"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference21" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid7061ne91k48g8e91kowhe">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="540,280,220,50"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::id9fdore91k48g8e91ke7vc.nodeid7061ne91k48g8e91kowhe.linkidt6p9e91k48g8e91kprl9:id9fdore91k48g8e91ke7vc.nodeid7061ne91k48g8e91kowhe">
+                <property name="sourceAnchor" value="639,330"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="639,360"/>
+            </reference>
+        </reference>
+    </view>
+    <node uin="id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb">
+        <property name="$metaclass" value="Subsystem"/>
+        <property name="$name" value="Interactive GUI"/>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb.nodeid7f54ne91k48g8e91khkv3">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="JGSL"/>
+        </node>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb.nodeidvim1e91k48g8e91kitm8">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="JGSLSwingFrame"/>
+        </node>
+        <link uin="id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb.linkid9m3rbe91k48g8e91knoqp">
+            <property name="$metaclass" value="Dependency Link"/>
+            <participant role="Supplier" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3"/>
+            <participant role="Client" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4dr4e91k48g8e91kellb"/>
+        </link>
+    </node>
+    <node uin="id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq">
+        <property name="$metaclass" value="Subsystem"/>
+        <property name="$name" value="Command Console"/>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq.nodeid80wlxe91k48g8e91kj119">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="JGSL"/>
+        </node>
+        <link uin="id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq.linkid9kv31e91k48g8e91kns09">
+            <property name="$metaclass" value="Dependency Link"/>
+            <participant role="Supplier" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3"/>
+            <participant role="Client" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid6qjl7e91k48g8e91kexyq"/>
+        </link>
+    </node>
+    <node uin="id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya">
+        <property name="$metaclass" value="Subsystem"/>
+        <property name="$name" value="Automated Tests"/>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya.nodeid3pahce91k48g8e91kk2sz">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="Script Parser Test"/>
+        </node>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya.nodeid6w18se91k48g8e91kkg88">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="Script Engine Test"/>
+        </node>
+        <link uin="id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya.linkid9s1doe91k48g8e91knuix">
+            <property name="$metaclass" value="Dependency Link"/>
+            <participant role="Supplier" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3"/>
+            <participant role="Client" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid4624se91k48g8e91kh6ya"/>
+        </link>
+    </node>
+    <node uin="id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3">
+        <property name="$metaclass" value="Component"/>
+        <property name="$name" value="JGSL Framework"/>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid3w035e91k48g8e91klgh6">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="Script Parser"/>
+        </node>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid8y6lve91k48g8e91klwnf">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="Script Engine"/>
+        </node>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid81jyde91k48g8e91kmy7o">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="JGSL Viewer"/>
+        </node>
+        <node uin="id9fdore91k48g8e91ke7vc.nodeid2wyyze91k48g8e91kkvo3.nodeid42zape91k48g8e91kn524">
+            <property name="$metaclass" value="Component"/>
+            <property name="$name" value="JGSL Script"/>
+        </node>
+    </node>
+    <node uin="id9fdore91k48g8e91ke7vc.nodeid7061ne91k48g8e91kowhe">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note1"/>
+        <property name="$note_text" value="The JGSL Developer conducts the tests contained in the test model."/>
+        <link uin="id9fdore91k48g8e91ke7vc.nodeid7061ne91k48g8e91kowhe.linkidt6p9e91k48g8e91kprl9">
+            <property name="$metaclass" value="Note Link"/>
+            <participant role="Supplier" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu"/>
+            <participant role="Client" referencedUin="design:node:::id9fdore91k48g8e91ke7vc.nodeid7061ne91k48g8e91kowhe"/>
+        </link>
+    </node>
+</nodeSet>

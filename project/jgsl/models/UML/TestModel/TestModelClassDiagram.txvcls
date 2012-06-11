@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <link uin="id8hfhhe91k48g8e91k9iro.linkid1scvve91k48g8e91kddoh">
+        <property name="$metaclass" value="Dependency Link"/>
+        <participant role="Supplier" referencedUin="design:view:::id8hz6ne1xmuz9ze1xnph8s"/>
+        <participant role="Client" referencedUin="design:view:::id8hfhhe91k48g8e91k9iro"/>
+    </link>
+    <view uin="id8hfhhe91k48g8e91k9iro">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="jdt:e_class:src:jgsl.controller.script.ScriptEngineTest">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="180,10,230,228"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference2" referencedUin="jdt:e_class:src:jgsl.io.ScriptParserTest">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,10,146,151"/>
+        </reference>
+    </view>
+</nodeSet>

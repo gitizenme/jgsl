@@ -1,0 +1,195 @@
+/*
+All JGSL commands for the Mac OS X 10.4 platform
+Mac performs optimiization on the graphics render that makes clear; and wait; act abnormally
+*/
+
+begin
+
+DOC ""
+DOC "Command: canvas"
+DOC ""
+DOC "The command canvas creates a canvas with the specified width and height and the background and foreground colors."
+DOC "The canvas can only be initized once"
+DOC ""
+DOC "   canvas (width, height, background_color, foreground_color);"
+DOC "       width - number representing the width of the canvas"
+DOC "       height - number representing the height of the canvas"
+DOC "       background_color - One of the default colors or a declared <color>"
+DOC "       foreground_color - One of the default colors or a declared <color>"
+DOC "       title - Title of the script (optional - defaults to 'JGSL Viewer')"
+DOC ""
+canvas (640, 480, BLACK, WHITE, "All Commands");
+
+DOC ""
+DOC "Command: clear"
+DOC ""
+DOC "Clear the canvas"
+DOC ""
+DOC "   clear;"
+clear;
+
+DOC ""
+DOC "Command: draw"
+DOC ""
+DOC "Draw a single point on the canvas"
+DOC ""
+DOC "   draw (x, y);"
+DOC "       x - x-coordinate of point"
+DOC "       y - y-coordinate of point"
+DOC ""
+draw (10,10);
+draw (11,10);
+draw (12,10);
+draw (13,10);
+draw (14,10);
+draw:RED (100,11);
+draw:RED (101,11);
+draw:RED (102,11);
+draw:RED (103,11);
+draw:RED (104,11);
+
+DOC ""
+DOC "Command: text"
+DOC ""
+DOC "Draw text on the canvas"
+DOC ""
+DOC "   text (x, y, message);"
+DOC "       x - x-coordinate of the start of the text"
+DOC "       y - y-coordinate of the start of the text"
+DOC "       message - text to draw on canvas"
+DOC ""
+text (25, 100, "This is a text string");
+text:GREEN (25, 125, "This is a GREEN text string");
+
+DOC ""
+DOC "Command: rectangle"
+DOC ""
+DOC "Draw a rectangle on the canvas"
+DOC ""
+DOC "   rectangle (x1, y1, width, height);"
+DOC "       x1 - x-coordinate"
+DOC "       y1 - y-coordinate"
+DOC "       width - width of square"
+DOC "       height - height of square"
+DOC ""
+DOC "rectangle (x1, y1, width, height);"
+rectangle (100, 100, 200, 150);
+rectangle:YELLOW (105, 105, 205, 155);
+
+DOC ""
+DOC "Command: square"
+DOC ""
+DOC "Draw a square on the canvas"
+DOC ""
+DOC "   square (x1, y1, width);"
+DOC "       x1 - x-coordinate"
+DOC "       y1 - y-coordinate"
+DOC "       width - width of square"
+DOC ""
+DOC "square (x1, y1, width);"
+square (125, 125, 75);
+square:MAGENTA (130, 130, 75);
+
+DOC ""
+DOC "Command: circle"
+DOC ""
+DOC "Draw a circle on the canvas"
+DOC ""
+DOC "   circle (x1, y1, radius);"
+DOC "       x1 - x-coordinate"
+DOC "       y1 - y-coordinate"
+DOC "       radius - radius of circle"
+DOC ""
+DOC "circle (x1, y1, radius);"
+circle (150, 150, 50.0);
+circle:PINK (155, 155, 55.0);
+
+DOC ""
+DOC "Command: elipse"
+DOC ""
+DOC "Draw an elipse on the canvas"
+DOC ""
+DOC "   elipse (x1, y1, width, height);"
+DOC "       x1 - x-coordinate"
+DOC "       y1 - y-coordinate"
+DOC "       width - width of elipse"
+DOC "       height - height of elipse"
+DOC ""
+DOC "elipse (x1, y1, width, height);"
+elipse (175, 175, 150, 250);
+elipse:GREEN (180, 180, 150, 250);
+
+DOC ""
+DOC "Command: arc"
+DOC ""
+DOC "Draw an arc on the canvas"
+DOC ""
+DOC "   arc (x1, y1, width, height, start angle, arc angle);"
+DOC "       x1 - x-coordinate"
+DOC "       y1 - y-coordinate"
+DOC "       width - width of arc"
+DOC "       height - height of arc"
+DOC "       start angle - start of arc"
+DOC "       arc angle - end of arc"
+DOC ""
+DOC "arc(x, y, width, height, start angle, arc angle);"
+arc (200, 200, 75, 125, 90, 135);
+arc:RED (205, 205, 76, 126, 90, 135);
+
+DOC ""
+DOC "Command: line"
+DOC ""
+DOC "Draw a line on the canvas"
+DOC ""
+DOC "   line (x1, y1, x2, y2);"
+DOC "       x1 - x-coordinate start of line"
+DOC "       y1 - y-coordinate start of line"
+DOC "       x2 - x-coordinate start of line"
+DOC "       y2 - y-coordinate start of line"
+DOC ""
+line (225, 225, 350, 400);
+line:BLUE (230, 230, 355, 405);
+
+DOC ""
+DOC "Command: wait"
+DOC ""
+DOC "Make the script pause for a number of seconds"
+DOC ""
+DOC "   wait (seconds);"
+DOC "       seconds - duration to pause the script (seconds)"
+wait(2);
+
+DOC ""
+DOC "Command: log"
+DOC ""
+DOC "Write a general log message to the jgsl.log file"
+DOC ""
+DOC "   log (message);"
+DOC "       message - Message "
+DOC ""
+log("This is a log message written to jgsl.log");
+
+DOC ""
+DOC "Command: log"
+DOC ""
+DOC "Write a general log message to the jgsl.log file"
+DOC ""
+DOC "   debug (message);"
+DOC "       message - duration to pause the script (seconds)"
+DOC ""
+debug("This is a debug message written to jgsl.log");
+
+DOC "error (message);"
+error("This is an error message written to jgsl.log");
+
+DOC "warning (message);"
+warning("This is a warning message written to jgsl.log");
+
+DOC "write (file name);"
+
+DOC "jgsl;"
+
+DOC "version;"
+
+end
+

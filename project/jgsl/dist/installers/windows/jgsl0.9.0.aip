@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="2.6.5" modules="freeware" RootPath=".">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install the JGSL."/>
+    <ROW Property="ARPCONTACT" Value="zenarchitect@perceptionsoft.com"/>
+    <ROW Property="ARPHELPLINK" Value="http://jgsl.dev.java.net"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon.exe"/>
+    <ROW Property="ARPURLINFOABOUT" Value="http://jgsl.dev.java.net"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="http://jgsl.dev.java.net"/>
+    <ROW Property="BannerBitmap" Value="default_banner.bmp"/>
+    <ROW Property="DialogBitmap" Value="default_dialog.bmp"/>
+    <ROW Property="Manufacturer" Value="Perception Software"/>
+    <ROW Property="ProductCode" Value="{A830716A-884D-45BC-8D2C-710AC3C53075}"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="JGSL 0.9.0"/>
+    <ROW Property="ProductVersion" Value="0.9.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{EE9B6AA6-FCAA-4F67-AEA9-0E986D4126AB}"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" Directory_Parent="" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="jgsl.exe" ComponentId="{DA49B79F-A95E-4062-BC7D-72F189051C88}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="jgsl.exe" FullKeyPath="TARGETDIR\jgsl.exe"/>
+    <ROW Component="jgslc.exe" ComponentId="{3454FCE6-F77F-4296-A6A8-BB7C8FFC9DEB}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="jgslc.exe" FullKeyPath="TARGETDIR\jgslc.exe"/>
+    <ROW Component="log4j_1.2.9.jar" ComponentId="{AFB258D4-60CC-4962-9250-9F6065967946}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="log4j_1.2.9.jar" FullKeyPath="TARGETDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Feature_Parent="" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="TARGETDIR" Attributes="0" Components="log4j_1.2.9.jar jgsl.exe jgslc.exe"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="commons_cli_1.0.jar" Component_="log4j_1.2.9.jar" FileName="common~1.jar|commons-cli-1.0.jar" Version="" Language="" Attributes="0" SourcePath="jgsl\jgsl\commons-cli-1.0.jar" SelfReg="false" Sequence="2"/>
+    <ROW File="idea_forms_rt.jar" Component_="log4j_1.2.9.jar" FileName="idea_f~1.jar|idea_forms_rt.jar" Version="" Language="" Attributes="0" SourcePath="jgsl\jgsl\idea_forms_rt.jar" SelfReg="false" Sequence="3"/>
+    <ROW File="javassist.jar" Component_="log4j_1.2.9.jar" FileName="javass~1.jar|javassist.jar" Version="" Language="" Attributes="0" SourcePath="jgsl\jgsl\javassist.jar" SelfReg="false" Sequence="4"/>
+    <ROW File="jgsl.exe" Component_="jgsl.exe" FileName="jgsl.exe" Version="" Language="" Attributes="0" SourcePath="jgsl\jgsl\jgsl.exe" SelfReg="false" Sequence="5"/>
+    <ROW File="jgsl.jar" Component_="log4j_1.2.9.jar" FileName="jgsl.jar" Version="" Language="" Attributes="0" SourcePath="jgsl\jgsl\jgsl.jar" SelfReg="false" Sequence="6"/>
+    <ROW File="jgslc.exe" Component_="jgslc.exe" FileName="jgslc.exe" Version="" Language="" Attributes="0" SourcePath="jgsl\jgsl\jgslc.exe" SelfReg="false" Sequence="7"/>
+    <ROW File="log4j_1.2.9.jar" Component_="log4j_1.2.9.jar" FileName="log4j-~1.jar|log4j-1.2.9.jar" Version="" Language="" Attributes="0" SourcePath="jgsl\jgsl\log4j-1.2.9.jar" SelfReg="false" Sequence="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="default_banner.bmp" SourcePath="&lt;default-banner.bmp&gt;"/>
+    <ROW Name="default_dialog.bmp" SourcePath="&lt;default-dialog.bmp&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Source="" Target="A higher version of [ProductName] is installed."/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR" Type="307" Source="TARGETDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFileHashComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="controlPanelIcon.exe" SourcePath="jgsl\jgsl\jgsl.exe" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="Start" value="WelcomeDlg FolderDlg VerifyReadyDlg"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="Version9X OR ((VersionNT &gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &gt;= 1)))" Description="[ProductName] cannot be installed on systems earlier than Windows NT 4.0 Service Pack 1."/>
+    <ROW Condition="VersionNT OR ((Version9X &gt;= 410) AND (WindowsBuild &gt;= 1998))" Description="[ProductName] cannot be installed on systems earlier than Windows 98."/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="FirstMediaSize" value="0"/>
+    <ATTRIBUTE name="FirstMediaSizeUnit" value="0"/>
+    <ATTRIBUTE name="InstallationType" value="0"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="MediaSizeUnit" value="0"/>
+    <ATTRIBUTE name="Package" value="1"/>
+    <ATTRIBUTE name="PackageName" value="jgsl0.9.0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="JGSL_0.9.0" Directory_="SHORTCUTDIR" Name="JGSL09~1.0|JGSL 0.9.0" Component_="jgsl.exe" Target="[#jgsl.exe]" Arguments="" Description="Java Graphics Scripting Language v0.9" Hotkey="0" Icon_="controlPanelIcon.exe" IconIndex="0" ShowCmd="1" WkDir="TARGETDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMin="" VersionMax="ProductVersion" Language="" Attributes="1025" Remove=""/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" VersionMax="" Language="" Attributes="2" Remove=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+  </COMPONENT>
+</DOCUMENT>

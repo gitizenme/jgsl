@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id406q7e8dl1ej9e8dl5sqc">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="jdt:e_class:src:jgsl.controller.script.ScriptEngine">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="20,20,200,144"/>
+            <reference referencedUin="jdt:l_ast:src:jgsl.controller.script.ScriptEngine:lnkJGSLScript">
+                <property name="sourceAnchor" value="210,87"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="340,87"/>
+            </reference>
+            <reference referencedUin="jdt:l_ast:src:jgsl.controller.script.ScriptEngine:lnkScriptEngineException">
+                <property name="sourceAnchor" value="115,154"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="115,270"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference21" referencedUin="design:view:::id8xvare8djsvv7e8dk6p97">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.model"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="380,10,120,310"/>
+            <reference referencedUin="design:link:::id8xvare8djsvv7e8dk6p97.linkid41g6te8dl1ej9e8dlsfrx">
+                <property name="sourceAnchor" value="220,92"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="380,92"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference39" referencedUin="design:view:::id1trpne8djsvv7e8dk7sme">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.io"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="80,270,142,240"/>
+            <reference referencedUin="design:link:::id1trpne8djsvv7e8dk7sme.linkid50xnae8dl1ej9e8dmccbz">
+                <property name="sourceAnchor" value="150,164"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="150,270"/>
+            </reference>
+        </reference>
+    </view>
+</nodeSet>

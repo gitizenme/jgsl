@@ -1,0 +1,8 @@
+begin
+
+canvas (640, 480, BLACK, WHITE, "line");
+
+line (25, 25, 100, 75);
+
+end
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+      codebase="http://zander.local/~jchavez/jnlp"
+      href="http://zander.local/~jchavez/jnlp/javassist.jnlp">
+
+    <information>
+        <title>JBoss Javassist Library</title>
+        <description>Part of the  Java Graphics Scripting Language (JGSL) distribution.</description>
+        <vendor>JBoss</vendor>
+    </information>
+
+    <resources>
+        <j2se version="1.5"/>
+        <jar href="javassist.jar"/>
+    </resources>
+
+    <component-desc/>
+
+    <security>
+        <all-permissions/>
+    </security>
+</jnlp>

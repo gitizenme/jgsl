@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+      codebase="http://zander.local/~jchavez/jnlp"
+      href="http://zander.local/~jchavez/jnlp/log4j.jnlp">
+
+    <information>
+        <title>Apache Log4j Library 1.2.9</title>
+        <description>Part of the  Java Graphics Scripting Language (JGSL) distribution.</description>
+        <vendor>Apache Jakarta</vendor>
+    </information>
+
+    <resources>
+        <j2se version="1.5"/>
+        <jar href="log4j-1.2.9.jar"/>
+    </resources>
+
+    <component-desc/>
+
+    <security>
+        <all-permissions/>
+    </security>
+</jnlp>

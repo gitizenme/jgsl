@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id346xe8dl1ej9e8dnb7ld">
+        <property name="$metaclass" value="Use Case Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="background_color" value="255,255,255"/>
+            <property name="bounds" value="20,190,67,87"/>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid8l2ete8dl1ej9e8dnidx4:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="87,201"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="190,201"/>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid45o4te8dl1ej9e8dnhzrp:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="58,190"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="58,73"/>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid7r3gpe8dl1ej9e8dnih7j:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="64,277"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="283,360"/>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid7h60ze8dl1ej9e8dnijdh:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="42,277"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="42,430"/>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid76i9ae8dl1ej9e8dnifc0:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="87,264"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="200,280"/>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid6dhfse8dl1ej9e8dnicbj:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="72,190"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="262,143"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference65" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid8bmwoe8dl1ej9e8dng5er">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,204,204"/>
+            <property name="bounds" value="20,30,191,43"/>
+        </reference>
+        <reference df-class-name="reference66" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid3xztie8dl1ej9e8dngikz">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,204,204"/>
+            <property name="bounds" value="160,100,205,43"/>
+        </reference>
+        <reference df-class-name="reference67" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid9t9pse8dl1ej9e8dngqyl">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,204,204"/>
+            <property name="bounds" value="190,180,218,43"/>
+        </reference>
+        <reference df-class-name="reference68" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid63kgae8dl1ej9e8dnh2s3">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,204,204"/>
+            <property name="bounds" value="200,270,241,43"/>
+        </reference>
+        <reference df-class-name="reference69" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid5cy4ce8dl1ej9e8dnhdy6">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="204,0,204"/>
+            <property name="bounds" value="160,360,246,43"/>
+        </reference>
+        <reference df-class-name="reference70" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid4zeoe8dl1ej9e8dnhngk">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,204,204"/>
+            <property name="bounds" value="20,430,160,43"/>
+        </reference>
+    </view>
+    <node uin="id346xe8dl1ej9e8dnb7ld.nodeid8bmwoe8dl1ej9e8dng5er">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="Open JGSL GUI"/>
+        <property name="$explanation" value="start the JGSL program"/>
+    </node>
+    <node uin="id346xe8dl1ej9e8dnb7ld.nodeid3xztie8dl1ej9e8dngikz">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="Write JGSL Script"/>
+        <property name="$explanation" value="create a new JGSL script"/>
+    </node>
+    <node uin="id346xe8dl1ej9e8dnb7ld.nodeid9t9pse8dl1ej9e8dngqyl">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="Save JGSL Script"/>
+        <property name="$explanation" value="save script file to local disk"/>
+    </node>
+    <node uin="id346xe8dl1ej9e8dnb7ld.nodeid63kgae8dl1ej9e8dnh2s3">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="Load JGSL Script"/>
+        <property name="$explanation" value="open script file from local disk"/>
+    </node>
+    <node uin="id346xe8dl1ej9e8dnb7ld.nodeid5cy4ce8dl1ej9e8dnhdy6">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="Execute JGSL Script"/>
+        <property name="$explanation" value="parse, validate and view script"/>
+    </node>
+    <node uin="id346xe8dl1ej9e8dnb7ld.nodeid4zeoe8dl1ej9e8dnhngk">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="View JGSL Help"/>
+        <property name="$explanation" value="display online help"/>
+    </node>
+</nodeSet>

@@ -1,0 +1,11 @@
+/*
+JGSL Script
+*/
+
+begin
+
+// Initialize the canvas
+canvas (640, 480, BLACK, WHITE, "jgsl script");
+
+end
+

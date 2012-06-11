@@ -1,0 +1,60 @@
+#!/bin/csh -f
+#
+set SPOT = Spot9.0
+#
+if ($1"x" == "x") then
+echo "Usage: "$0" <jarpath>"
+echo "Aborting"
+exit 1
+endif
+set JAR_DIR = $1
+
+set CURRENT_DIR = `pwd`
+# DIR names must be absolute for tar command
+set RELEASE_NOTES_DIR = $CURRENT_DIR/../../../docs/spot/unix
+set RELEASE_NOTES_PDF = Spot_ReleaseNotes_100.pdf
+set RELEASE_NOTES_TXT = Spot_ReleaseNotes_100.txt
+set USER_GUIDE_PDF = Spot_UserGuide_v100_docrev0.pdf
+#set JAR_DIR = $CURRENT_DIR/../../../jars
+set JRE_DIR = /ssc/uplink/sut/jre-dist/linux
+set JRE = jre
+#
+sed -e "s:##RELEASE_NOTES_TXT##:${RELEASE_NOTES_TXT}:" \
+    -e "s:##RELEASE_NOTES_PDF##:${RELEASE_NOTES_PDF}:" \
+    -e "s:##USER_GUIDE_PDF##:${USER_GUIDE_PDF}:" \
+    -e "s:##JRE##:${JRE}:" \
+    INSTALL.template > INSTALL
+chmod 777 INSTALL
+#
+echo tarring the jre
+(chdir $JRE_DIR; tar -cvf jre.tar jre; echo gzipping the jre; gzip -f jre.tar)
+#
+tar cvf $SPOT.tar \
+  INSTALL             \
+  -C $JAR_DIR  jhall.jar \
+  -C $JAR_DIR  meta.jar \
+  -C $JAR_DIR  loader.jar \
+  -C $JAR_DIR  sut.jar \
+  -C $JAR_DIR  planner.jar \
+  -C $JAR_DIR  client.jar \
+  -C $JAR_DIR  astro.jar \
+  -C $JAR_DIR  sodb.jar \
+  -C $JAR_DIR  oldsodb.jar \
+  -C $JAR_DIR  suthelp.jar \
+  -C $JAR_DIR  fits.jar \
+  -C $JAR_DIR  client_sysfiles.jar \
+  -C $JAR_DIR  uplink_util.jar \
+  -C $JAR_DIR  uplink_vis_client.jar \
+  -C $JAR_DIR  jhall.jar \
+  -C $JAR_DIR  jaxp.jar \
+  -C $JAR_DIR  crimson.jar \
+  -C $JAR_DIR  jcpagelayout.jar \
+  -C $JAR_DIR  iText_light.jar \
+  -C $RELEASE_NOTES_DIR $RELEASE_NOTES_PDF \
+  -C $RELEASE_NOTES_DIR $RELEASE_NOTES_TXT \
+  -C $RELEASE_NOTES_DIR/.. $USER_GUIDE_PDF \
+  -C $JRE_DIR linux-jreVersion.prop \
+  -C $JRE_DIR ${JRE}.tar.gz 
+#
+cat bin_script $SPOT.tar > $SPOT.sh
+chmod +x $SPOT.sh

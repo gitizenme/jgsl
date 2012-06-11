@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="ide4ws2e5xx4yvxe5xx6vrb">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="jdt:e_class:src:jgsl.io.ScriptParserException">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference17" referencedUin="jdt:e_class:src:jgsl.io.Utils">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference18" referencedUin="jdt:e_class:src:jgsl.io.ScriptParser">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference19" referencedUin="jdt:e_class:src:jgsl.io.ScriptParserTest">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <reference df-class-name="reference20" referencedUin="jdt:e_class:src:jgsl.io.JGSLFileFilter">
+            <property name="$shortcutReference" value="true"/>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

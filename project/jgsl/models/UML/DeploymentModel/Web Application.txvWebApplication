@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id19o4oe91k48g8e91lf3hh">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="WebApplicationDiagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id19o4oe91k48g8e91lf3hh.nodeid3xsn6e91k48g8e91ls3t2">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="80,20,80,80"/>
+        </reference>
+        <reference df-class-name="reference52" referencedUin="design:node:::id19o4oe91k48g8e91lf3hh.nodeid6761e91k48g8e91lsicu">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="40,180,80,80"/>
+        </reference>
+        <reference df-class-name="reference53" referencedUin="design:node:::id19o4oe91k48g8e91lf3hh.nodeid2759ke91k48g8e91lsn3b">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="205,196,92,80"/>
+        </reference>
+        <reference df-class-name="reference54" referencedUin="design:node:::id19o4oe91k48g8e91lf3hh.nodeid9h55he91k48g8e91lt5ew">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="368,201,109,80"/>
+        </reference>
+        <reference df-class-name="reference55" referencedUin="design:node:::id19o4oe91k48g8e91lf3hh.nodeid4yef5e91k48g8e91ltqyh">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="510,190,81,80"/>
+        </reference>
+        <reference df-class-name="reference56" referencedUin="design:node:::id19o4oe91k48g8e91lf3hh.nodeid9ajxje91k48g8e91lu7hl">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="654,190,124,80"/>
+        </reference>
+    </view>
+    <node uin="id19o4oe91k48g8e91lf3hh.nodeid3xsn6e91k48g8e91ls3t2">
+        <property name="$metaclass" value="WebFiles"/>
+        <property name="$name" value="index.html"/>
+    </node>
+    <node uin="id19o4oe91k48g8e91lf3hh.nodeid6761e91k48g8e91lsicu">
+        <property name="$metaclass" value="WebFiles"/>
+        <property name="$name" value="jgsl.jnlp"/>
+    </node>
+    <node uin="id19o4oe91k48g8e91lf3hh.nodeid2759ke91k48g8e91lsn3b">
+        <property name="$metaclass" value="WebFiles"/>
+        <property name="$name" value="log4j-1.2.9.jnlp"/>
+    </node>
+    <node uin="id19o4oe91k48g8e91lf3hh.nodeid9h55he91k48g8e91lt5ew">
+        <property name="$metaclass" value="WebFiles"/>
+        <property name="$name" value="idea_forms_rt.jnlp"/>
+    </node>
+    <node uin="id19o4oe91k48g8e91lf3hh.nodeid4yef5e91k48g8e91ltqyh">
+        <property name="$metaclass" value="WebFiles"/>
+        <property name="$name" value="javassist.jnlp"/>
+    </node>
+    <node uin="id19o4oe91k48g8e91lf3hh.nodeid9ajxje91k48g8e91lu7hl">
+        <property name="$metaclass" value="WebFiles"/>
+        <property name="$name" value="commons-cli-1.0.jnlp"/>
+    </node>
+</nodeSet>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <link uin="id7spz2e1xmuz9ze1xnpq20.linkid7a8sie1xmuz9ze1xnrwf2">
+        <participant role="Supplier" referencedUin="design:view:::id8hz6ne1xmuz9ze1xnph8s"/>
+        <participant role="Client" referencedUin="design:view:::id7spz2e1xmuz9ze1xnpq20"/>
+        <property name="$metaclass" value="Dependency Link"/>
+    </link>
+    <view uin="id7spz2e1xmuz9ze1xnpq20">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:view:::id5wduue1xmuz9ze1xnsuy7">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,10,165,138"/>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

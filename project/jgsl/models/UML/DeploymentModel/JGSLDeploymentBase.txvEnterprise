@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="idr81e91k48g8e91kykw9">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="EnterpriseDiagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid6cnrde91k48g8e91kytbq">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="30,20,130,100"/>
+        </reference>
+        <reference df-class-name="reference25" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid3qh3xe91k48g8e91l3aao">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="570,160,182,100"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference26" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid8lkpce91k48g8e91l49tr">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="210,160,130,100"/>
+        </reference>
+        <reference df-class-name="reference27" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid2of4be91k48g8e91l4n0n">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="390,160,130,100"/>
+        </reference>
+        <reference df-class-name="reference28" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid52dive91k48g8e91l4wqz">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="30,160,130,100"/>
+        </reference>
+        <reference df-class-name="reference29" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid4kgfve91k48g8e91l5nac">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="220,30,250,60"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::idr81e91k48g8e91kykw9.nodeid4kgfve91k48g8e91l5nac.linkid393zre91k48g8e91l6i52:idr81e91k48g8e91kykw9.nodeid4kgfve91k48g8e91l5nac">
+                <property name="sourceAnchor" value="220,60"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="160,60"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference30" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid4l6ige91k48g8e91l7c10">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="40,300,97,40"/>
+            <reference referencedUin="design:link:::idr81e91k48g8e91kykw9.nodeid4l6ige91k48g8e91l7c10.linkid9fpf3e91k48g8e91l7lh6:idr81e91k48g8e91kykw9.nodeid4l6ige91k48g8e91l7c10">
+                <property name="sourceAnchor" value="88,300"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="88,260"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference31" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid9n90ge91k48g8e91l7qu8">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="200,300,150,75"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::idr81e91k48g8e91kykw9.nodeid9n90ge91k48g8e91l7qu8.linkid13vdoe91k48g8e91l8mfe:idr81e91k48g8e91kykw9.nodeid9n90ge91k48g8e91l7qu8">
+                <property name="sourceAnchor" value="275,300"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="275,260"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference32" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid72062e91k48g8e91l94hj">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="400,300,120,40"/>
+            <reference referencedUin="design:link:::idr81e91k48g8e91kykw9.nodeid72062e91k48g8e91l94hj.linkid9ru91e91k48g8e91l9jcs:idr81e91k48g8e91kykw9.nodeid72062e91k48g8e91l94hj">
+                <property name="sourceAnchor" value="460,300"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="460,260"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference33" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid6eg0qe91k48g8e91l9me3">
+            <property name="$shortcutReference" value="true"/>
+            <property name="bounds" value="580,300,182,40"/>
+            <reference referencedUin="design:link:::idr81e91k48g8e91kykw9.nodeid6eg0qe91k48g8e91l9me3.linkid28e5ke91k48g8e91l9xx2:idr81e91k48g8e91kykw9.nodeid6eg0qe91k48g8e91l9me3">
+                <property name="sourceAnchor" value="666,300"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="666,260"/>
+            </reference>
+        </reference>
+    </view>
+    <node uin="idr81e91k48g8e91kykw9.nodeid6cnrde91k48g8e91kytbq">
+        <property name="$metaclass" value="ArchivedModule"/>
+        <property name="$name" value="jgsl.jar"/>
+        <property name="@stereotype" value="JAR"/>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid3qh3xe91k48g8e91l3aao">
+        <property name="$metaclass" value="ArchivedModule"/>
+        <property name="$name" value="commons-cli-1.0.jar"/>
+        <property name="@stereotype" value="JAR"/>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid8lkpce91k48g8e91l49tr">
+        <property name="$metaclass" value="ArchivedModule"/>
+        <property name="$name" value="idea_forms_rt.jar"/>
+        <property name="@stereotype" value="JAR"/>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid2of4be91k48g8e91l4n0n">
+        <property name="$metaclass" value="ArchivedModule"/>
+        <property name="$name" value="javassist.jar"/>
+        <property name="@stereotype" value="JAR"/>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid52dive91k48g8e91l4wqz">
+        <property name="$metaclass" value="ArchivedModule"/>
+        <property name="$name" value="log4j-1.2.9.jar"/>
+        <property name="@stereotype" value="JAR"/>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid4kgfve91k48g8e91l5nac">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note1"/>
+        <property name="$note_text" value="Contains the JGSL implementation including the Interactive GUI and Command Console."/>
+        <link uin="idr81e91k48g8e91kykw9.nodeid4kgfve91k48g8e91l5nac.linkid393zre91k48g8e91l6i52">
+            <property name="$metaclass" value="Note Link"/>
+            <participant role="Supplier" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid6cnrde91k48g8e91kytbq"/>
+            <participant role="Client" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid4kgfve91k48g8e91l5nac"/>
+        </link>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid4l6ige91k48g8e91l7c10">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note2"/>
+        <property name="$note_text" value="Logging API"/>
+        <link uin="idr81e91k48g8e91kykw9.nodeid4l6ige91k48g8e91l7c10.linkid9fpf3e91k48g8e91l7lh6">
+            <property name="$metaclass" value="Note Link"/>
+            <participant role="Supplier" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid52dive91k48g8e91l4wqz"/>
+            <participant role="Client" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid4l6ige91k48g8e91l7c10"/>
+        </link>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid9n90ge91k48g8e91l7qu8">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note3"/>
+        <property name="$note_text" value="Interactive GUI runtime. Required by GUI builder forms."/>
+        <link uin="idr81e91k48g8e91kykw9.nodeid9n90ge91k48g8e91l7qu8.linkid13vdoe91k48g8e91l8mfe">
+            <property name="$metaclass" value="Note Link"/>
+            <participant role="Supplier" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid8lkpce91k48g8e91l49tr"/>
+            <participant role="Client" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid9n90ge91k48g8e91l7qu8"/>
+        </link>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid72062e91k48g8e91l94hj">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note4"/>
+        <property name="$note_text" value="Javassist library."/>
+        <link uin="idr81e91k48g8e91kykw9.nodeid72062e91k48g8e91l94hj.linkid9ru91e91k48g8e91l9jcs">
+            <property name="$metaclass" value="Note Link"/>
+            <participant role="Supplier" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid2of4be91k48g8e91l4n0n"/>
+            <participant role="Client" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid72062e91k48g8e91l94hj"/>
+        </link>
+    </node>
+    <node uin="idr81e91k48g8e91kykw9.nodeid6eg0qe91k48g8e91l9me3">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note5"/>
+        <property name="$note_text" value="Command line interface API"/>
+        <link uin="idr81e91k48g8e91kykw9.nodeid6eg0qe91k48g8e91l9me3.linkid28e5ke91k48g8e91l9xx2">
+            <property name="$metaclass" value="Note Link"/>
+            <participant role="Supplier" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid3qh3xe91k48g8e91l3aao"/>
+            <participant role="Client" referencedUin="design:node:::idr81e91k48g8e91kykw9.nodeid6eg0qe91k48g8e91l9me3"/>
+        </link>
+    </node>
+</nodeSet>

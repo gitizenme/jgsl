@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id55k37e91k48g8e91kfzqt">
+        <property name="$description" value=""/>
+        <property name="$viewType" value="collaborationView"/>
+        <property name="$metaclass" value="Collaboration Diagram"/>
+        <property name="@__options" value=""/>
+    </view>
+</nodeSet>

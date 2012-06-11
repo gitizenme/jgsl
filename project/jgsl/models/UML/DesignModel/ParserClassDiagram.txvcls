@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id51bque8djsvv7e8dk68nz">
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="jdt:e_class:src:jgsl.parser.JGSL_Parser">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="@hideAttributes" value=""/>
+            <property name="@hideAll" value=""/>
+            <property name="bounds" value="370,50,165,42"/>
+        </reference>
+        <reference df-class-name="reference127" referencedUin="jdt:e_class:src:jgsl.io.ScriptParser">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="50,40,142,102"/>
+            <reference referencedUin="jdt:l_ast:src:jgsl.io.ScriptParser:parser">
+                <property name="sourceAnchor" value="192,71"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="370,71"/>
+            </reference>
+            <reference referencedUin="jdt:l_ast:src:jgsl.io.ScriptParser:lnkMessage">
+                <property name="sourceAnchor" value="192,122"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="370,189"/>
+            </reference>
+            <reference referencedUin="jdt:l_ast:src:jgsl.io.ScriptParser:lnkScriptParserException">
+                <property name="sourceAnchor" value="121,142"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="121,230"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference128" referencedUin="jdt:e_class:src:jgsl.io.ScriptParserException">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="@hideAll" value=""/>
+            <property name="bounds" value="30,230,178,42"/>
+        </reference>
+        <reference df-class-name="reference129" referencedUin="jdt:e_class:src:jgsl.io.ScriptMessage">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="610,390,150,139"/>
+            <reference referencedUin="jdt:l_impl:src:jgsl.io.ScriptMessage:jgsl.io.Message">
+                <property name="sourceAnchor" value="685,390"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="461,312"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference130" referencedUin="jdt:e_class:src:jgsl.io.Message">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="370,160,148,152"/>
+        </reference>
+        <reference df-class-name="reference131" referencedUin="jdt:e_class:src:jgsl.io.ScriptError">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="90,380,148,174"/>
+            <reference referencedUin="jdt:l_impl:src:jgsl.io.ScriptError:jgsl.io.Message">
+                <property name="sourceAnchor" value="104,380"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="392,312"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference132" referencedUin="jdt:e_class:src:jgsl.io.ScriptWarning">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="360,430,148,174"/>
+            <reference referencedUin="jdt:l_impl:src:jgsl.io.ScriptWarning:jgsl.io.Message">
+                <property name="sourceAnchor" value="430,430"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="430,312"/>
+            </reference>
+        </reference>
+    </view>
+</nodeSet>

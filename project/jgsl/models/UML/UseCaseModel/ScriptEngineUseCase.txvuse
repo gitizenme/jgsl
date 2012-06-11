@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="idfwyke8dl1ej9e8dnd2ng">
+        <property name="$metaclass" value="Use Case Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="background_color" value="255,255,255"/>
+            <property name="bounds" value="10,10,98,87"/>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu.linkid1wwgfe8dl1ej9e8dnrblh:id98dz1e8dl1ej9e8dnci3o.nodeid3fpfie8dl1ej9e8dnd5yu">
+                <property name="sourceAnchor" value="108,31"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="188,31"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference76" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid5cy4ce8dl1ej9e8dnhdy6">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="background_color" value="204,0,204"/>
+            <property name="bounds" value="188,10,275,43"/>
+        </reference>
+    </view>
+</nodeSet>

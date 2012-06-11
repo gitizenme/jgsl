@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id2peyye8dl1ej9e8dlt8py">
+        <property name="$description" value=""/>
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value="option.showPackageContents = true&#xA;option.showPackageContents.showShortcuts = true"/>
+        <reference df-class-name="reference24" referencedUin="design:view:::id8xvare8djsvv7e8dk6p97">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.model"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="320,250,120,310"/>
+        </reference>
+        <reference df-class-name="reference28" referencedUin="design:view:::id8tdiye8djsvv7e8dk7sp0">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.view.swing"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="20,190,124,149"/>
+            <reference referencedUin="design:link:::id8tdiye8djsvv7e8dk7sp0.linkiddkc5e8dl1ej9e8dly4cd">
+                <property name="sourceAnchor" value="144,214"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="310,143"/>
+            </reference>
+            <reference referencedUin="design:link:::id8tdiye8djsvv7e8dk7sp0.linkid8nx8ee8dl1ej9e8dlxm3p">
+                <property name="sourceAnchor" value="144,299"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="320,299"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference" referencedUin="design:view:::id551pae8djsvv7e8dk7slv">
+            <property name="$shortcutReference" value="true"/>
+            <property name="@__fqn" value="uml:package:jgsl:src:jgsl.controller.script"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="310,40,145,128"/>
+            <reference referencedUin="design:link:::id551pae8djsvv7e8dk7slv.linkid80o8je8dl1ej9e8dly027">
+                <property name="sourceAnchor" value="380,168"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="380,250"/>
+            </reference>
+        </reference>
+    </view>
+</nodeSet>

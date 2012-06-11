@@ -1,0 +1,80 @@
+#!/bin/csh -f
+#
+#
+# java vm
+#
+set RELEASE_NOTES_TXT = ##RELEASE_NOTES_TXT##
+set RELEASE_NOTES_PDF = ##RELEASE_NOTES_PDF##
+set USER_GUIDE_PDF = ##USER_GUIDE_PDF##
+#
+# sut
+#
+if ($?JAVA_HOME == 0) then
+   echo -n "Please enter JAVA_HOME for your java installation: "
+   set JAVA_HOME = $<
+endif
+#
+set TMPDIR = ""
+while ($TMPDIR !~ /*)
+ echo -n "Please enter the full directory name where you want SPOT installed: "
+ set TMPDIR = $<
+ if ($TMPDIR !~ /*) then
+   echo "ERROR: the directory name must begin with a slash."
+   endif
+ end
+#
+if (! -d $TMPDIR) then
+  echo "making directory " $TMPDIR
+  mkdir -p $TMPDIR
+  set savestatus = $status
+  if ($savestatus != 0) then
+    echo status from mkdir $TMPDIR = $savestatus
+    echo ABORTING INSTALLATION
+    exit $savestatus
+    endif
+endif
+if (! -d $TMPDIR/lib) then
+  echo "making directory " $TMPDIR/lib
+  mkdir $TMPDIR/lib
+  set savestatus = $status
+  if ($savestatus != 0) then
+    echo status from mkdir $TMPDIR/lib = $savestatus
+    echo ABORTING INSTALLATION
+    exit $savestatus
+    endif
+endif
+set INSTALLDIR = `(cd $TMPDIR; pwd)`
+echo "Your installation dir is: " $INSTALLDIR
+set SUT = `echo $INSTALLDIR/lib/loader.jar`
+set CDIR = `pwd`
+echo "Unpacking..."
+cp meta.jar loader.jar sut.jar planner.jar client.jar astro.jar sodb.jar oldsodb.jar suthelp.jar fits.jar client_sysfiles.jar uplink_util.jar uplink_vis_client.jar jhall.jar jaxp.jar crimson.jar jcpagelayout.jar iText_light.jar $INSTALLDIR/lib
+    set savestatus = $status
+    if ($savestatus != 0) then
+      echo status from cp = $savestatus
+      echo ABORTING INSTALLATION
+      exit $savestatus
+      endif
+cp $RELEASE_NOTES_PDF $RELEASE_NOTES_TXT $USER_GUIDE_PDF  $INSTALLDIR
+    set savestatus = $status
+    if ($savestatus != 0) then
+      echo status from cp = $savestatus
+      echo ABORTING INSTALLATION
+      exit $savestatus
+      endif
+
+##  RBH: delete the -Dos.name=generic - it is for testing on a Solaris
+##       platform (by faking an unknown operating system)
+#$JAVA_HOME/bin/java -Dos.name=generic -jar $INSTALLDIR/lib/loader.jar
+$JAVA_HOME/bin/java -Dos.name=generic -jar $INSTALLDIR/lib/loader.jar
+chmod +x $INSTALLDIR/spot
+chmod +x $INSTALLDIR/leopard
+chmod +x $INSTALLDIR/subscriber
+echo ""
+echo "--------------------------------------------------------------"
+echo "The installation was successful."
+echo "You can run spot by changing your directory to " $INSTALLDIR 
+echo "and typing ./spot"
+echo "or by adding " $INSTALLDIR "to your path"
+echo "--------------------------------------------------------------"
+echo ""

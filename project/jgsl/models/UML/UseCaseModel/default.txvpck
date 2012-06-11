@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id8hz6ne1xmuz9ze1xnph8s">
+        <property name="$metaclass" value="Package Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:view:::id346xe8dl1ej9e8dnb7ld">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,10,154,152"/>
+        </reference>
+        <reference df-class-name="reference62" referencedUin="design:view:::id98dz1e8dl1ej9e8dnci3o">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="250,190,104,82"/>
+        </reference>
+        <reference df-class-name="reference63" referencedUin="design:view:::idfwyke8dl1ej9e8dnd2ng">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="440,20,145,82"/>
+        </reference>
+        <reference df-class-name="reference72" referencedUin="design:view:::id1h5lne8dl1ej9e8dnobif">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="190,20,200,110"/>
+        </reference>
+        <property name="$defaultDiagram" value=""/>
+    </view>
+</nodeSet>

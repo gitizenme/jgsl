@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id1h5lne8dl1ej9e8dnobif">
+        <property name="$metaclass" value="Use Case Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="design:node:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="background_color" value="255,255,255"/>
+            <property name="bounds" value="10,60,67,87"/>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid4myvce8dl1ej9e8dnpx7u:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="43,147"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="339,200"/>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid7har4e8dl1ej9e8dnpuwi:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="77,73"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="210,43"/>
+            </reference>
+            <reference referencedUin="design:link:::id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr.linkid7r3gpe8dl1ej9e8dnih7j:id98dz1e8dl1ej9e8dnci3o.nodeid9k6tee8dl1ej9e8dnckhr">
+                <property name="sourceAnchor" value="77,121"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="200,121"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference73" referencedUin="design:node:::id346xe8dl1ej9e8dnb7ld.nodeid5cy4ce8dl1ej9e8dnhdy6">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="background_color" value="204,0,204"/>
+            <property name="bounds" value="200,100,275,43"/>
+        </reference>
+        <reference df-class-name="reference74" referencedUin="design:node:::id1h5lne8dl1ej9e8dnobif.nodeid9qsv9e8dl1ej9e8dnouqh">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,204,204"/>
+            <property name="bounds" value="210,10,248,43"/>
+        </reference>
+        <reference df-class-name="reference75" referencedUin="design:node:::id1h5lne8dl1ej9e8dnobif.nodeid7y40te8dl1ej9e8dnpadm">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="0,204,204"/>
+            <property name="bounds" value="180,200,319,43"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+    </view>
+    <node uin="id1h5lne8dl1ej9e8dnobif.nodeid9qsv9e8dl1ej9e8dnouqh">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="Run JGSL Command Console"/>
+        <property name="$explanation" value="run JGSL from command line"/>
+    </node>
+    <node uin="id1h5lne8dl1ej9e8dnobif.nodeid7y40te8dl1ej9e8dnpadm">
+        <property name="$metaclass" value="Use Case"/>
+        <property name="$name" value="View JGSL Command Console Help"/>
+        <property name="$explanation" value="display help to command line"/>
+    </node>
+</nodeSet>

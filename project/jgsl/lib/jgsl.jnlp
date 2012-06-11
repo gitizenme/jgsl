@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+      codebase="http://zander.local/~jchavez/jnlp"
+      href="http://zander.local/~jchavez/jnlp/jgsl.jnlp">
+    <information>
+        <title>JGSL</title>
+        <vendor>Perceptionsoft</vendor>
+        <homepage href="index.html" />
+        <description>The Java Graphics Scripting Language (JGSL)</description>
+        <description kind="tooltip">JGSL</description>
+        <icon href="images/icon.jpg"/>
+        <offline-allowed/>
+        <shortcut online="false">
+          <desktop/>
+          <menu submenu="JGSL"/>
+        </shortcut>
+    </information>
+    <resources>
+        <j2se version="1.5"/>
+        <jar href="jgsl.jar"/>
+        <extension name="commons_cli" href="commons_cli.jnlp"/>
+        <extension name="idea_forms_rt" href="idea_forms_rt.jnlp"/>
+        <extension name="javassist" href="javassist.jnlp"/>
+        <extension name="log4j" href="log4j.jnlp"/>
+    </resources>
+    <application-desc main-class="jgsl.JGSL"/>
+    <security>
+        <all-permissions/>
+    </security>
+</jnlp>

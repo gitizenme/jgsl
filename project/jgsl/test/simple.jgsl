@@ -1,0 +1,35 @@
+/*
+    A multi-line comment
+*/
+
+// A single line comment
+
+# Another single line comment
+
+begin
+
+// comment
+# comment
+
+declare canvas c1;
+declare canvas c2;
+declare color cGreen = GREEN;
+declare color rgbI = 0,0,0;
+declare color rgbF = 0.0,0.0,0.0;
+declare color rgbS = "0.0","0.0","0.0";
+declare attr1;
+declare attr2 = "foo";
+declare attr3 = 123;
+declare attr4 = 123.5;
+declare attr5 = attr2;
+
+c1 = c2;
+
+
+clear;
+line (5,5,5,5);
+LINE:red ("5","5","5","5");
+
+end
+
+# comment
